@@ -1,0 +1,23 @@
+---
+layout: default
+title: List of Posts by Category
+---
+
+<div id="category-list">
+  <div class="panel-body">
+    {% for category in site.categories %}
+
+    <h1 id="{{ category[0] }}" class="category">{{ category[0] }}</h1>
+    <ul>
+      {% for post in category[1] %}
+      <li>
+	<a href="{{ post.url }}" title="View post '{{ post.title }}'">
+	  {{ post.title }}</a>
+	{{ post.date | date_to_string }}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% endfor %}
+  </div>
+</div>

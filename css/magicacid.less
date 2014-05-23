@@ -1,0 +1,70 @@
+@import (reference) '../bower_components/bootstrap/less/bootstrap.less';
+
+body {
+    background-color: black;
+    background-image: url('/images/blog-hemoglobin.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+#home {
+    .row();
+    .blog-excerpt {
+	.panel;
+	.panel-default;
+	.panel-heading h2 {
+	    display: inline-block;
+	    font-size: 14pt;
+	    margin: 10px 0px;
+	}
+    }
+}
+
+.header {
+    .row();
+    .logo {
+	.make-md-column(6);
+	font-size: 30px;
+	margin: 10px 0px;
+	img {
+	    width: 250px;
+	}
+    }
+}
+
+.sidebar-box {
+    .panel;
+    .panel-default;
+}
+
+#category-list {
+    .panel;
+    .panel-default;
+}
+
+.full-post {
+    .panel;
+    .panel-default;
+}
+
+.comments {
+    .panel;
+    .panel-default;
+}
+
+.category {
+    text-transform: capitalize;
+}
+.category-tag {
+    .label;
+    .label-default;
+    .category;
+}
+
+.main-panel {
+    .make-md-column(8);
+}
+
+.side-panel {
+    .make-md-column(4);
+}

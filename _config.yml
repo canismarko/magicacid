@@ -1,3 +1,15 @@
-name: Your New Jekyll Site
+name: Magic Acid
 markdown: redcarpet
 pygments: true
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: "Chemistry, Grad-school and everything else"
+  -
+    scope:
+      path: "_posts/"
+    values:
+      layout: post
