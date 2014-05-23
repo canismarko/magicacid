@@ -1,13 +1,15 @@
 name: Magic Acid
+description: "My blog. Chemistry and stuff"
 markdown: redcarpet
 pygments: true
+url: "magicacid.com"
 
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title: "Chemistry, Grad-school and everything else"
+      title: "Chemistry and stuff."
   -
     scope:
       path: "_posts/"
