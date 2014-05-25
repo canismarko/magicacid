@@ -9,13 +9,16 @@ body {
 
 #home {
     .row();
-    .blog-excerpt {
+    .post-excerpt {
 	.panel;
 	.panel-default;
 	.panel-heading h2 {
 	    display: inline-block;
 	    font-size: 14pt;
 	    margin: 10px 0px;
+	}
+	img {
+	    .img-responsive();
 	}
     }
 }
@@ -65,6 +68,16 @@ body {
 .full-post {
     .panel;
     .panel-default;
+    .post-body {
+	p {text-align: justify;}
+	img {
+	    .img-responsive();
+	}
+    }
+}
+
+.caption {
+    font-size: 80%;
 }
 
 .comments {
@@ -82,9 +95,9 @@ body {
 }
 
 .main-panel {
-    .make-md-column(8);
+    .make-md-column(9);
 }
 
 .side-panel {
-    .make-md-column(4);
+    .make-md-column(3);
 }

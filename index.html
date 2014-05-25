@@ -6,7 +6,7 @@ commentcount: true
 <div id="home">
 
   {% for post in site.posts %}
-  <div class="blog-excerpt">
+  <div class="post-excerpt">
     <div class="panel-heading">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <span>
@@ -20,8 +20,11 @@ commentcount: true
       <p><a href="{{ post.url }}#disqus_thread">Comments</a></p>
     </div>
     <div class="panel-body">
-      <span></span>
       {{ post.excerpt }}
+      <p>
+	<a href="{{ post.url }}" title="Read full post: {{ post.title }}">
+	  Read more...</a>
+      </p>
     </div>
   </div>
   {% endfor %}
