@@ -3,6 +3,7 @@ description: "My blog. Chemistry and stuff"
 markdown: redcarpet
 pygments: true
 url: "localhost:8000"
+debug: True
 
 defaults:
   -

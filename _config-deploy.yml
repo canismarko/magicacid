@@ -1,1 +1,3 @@
 url: "http://magicacid.com"
+debug: False
+analytics: True
