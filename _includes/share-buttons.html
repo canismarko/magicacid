@@ -1,0 +1,34 @@
+{% if post %}
+{% assign object = post %}
+{% else %}
+{% assign object = page %}
+{% endif %}
+
+<div class="share-buttons">
+
+  <!-- Facebook -->
+  <div class="btn-share">
+    <div class="fb-share-button" data-href="{{ site.url }}{{ object.url }}" data-type="button_count"></div>
+  </div>
+
+  <!-- Twitter -->
+  <div class="btn-share-twitter">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ object.url }}" data-text="{{ object.title }}" data-via="m3wolf">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  </div>
+
+  <!-- Google+ -->
+  <div class="btn-share-gplus">
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <div class="g-plusone" data-href="{{ site.url }}{{ object.url }}"></div>
+  </div>
+
+  <!-- Reddit -->
+  <div class="btn-share-reddit">
+    <script type="text/javascript">
+      reddit_url='{{ site.url }}{{ object.url }}'
+    </script>
+    <script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
+  </div>
+
+</div>

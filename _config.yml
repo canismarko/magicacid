@@ -2,7 +2,7 @@ name: Magic Acid
 description: "My blog. Chemistry and stuff"
 markdown: redcarpet
 pygments: true
-url: "localhost:8000"
+url: "http://localhost:8000"
 debug: True
 email: "mark.wolf.music@gmail.com"
 

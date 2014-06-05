@@ -1,0 +1,122 @@
+---
+categories: [chemistry, health]
+title: "Follow-up: I Have a Carbon Monoxide Detector. Now What?"
+layout: post
+---
+
+<p>
+  This is a follow-up post to
+  <a href="/chemistry/2014/05/25/CO-detector.html"
+     title="Read original carbon monoxide article">&ldquo;Why Do I Need a Carbon
+     Monoxide Detector?&rdquo;</a>, which talks about the chemistry of
+     carbon monoxide with oxygen-transporting proteins in your
+     blood. I received a few questions about <strong>the relationship
+     between carbon monoxide levels in the air and the levels in your
+     hemoglobin</strong>. I also wanted to learn <strong>how carbon
+     monoxide alarms respond to carbon monoxide</strong> (CO) but not
+     other gases in the air, like carbon dioxide (CO<sub>2</sub>).
+</p>
+
+<h2>CO Levels in Air and Blood</h2>
+<p>
+  When I was younger, I was terrified that carbon monoxide binds
+  permanently to hemoglobin and that the damage might never be
+  undone. <strong>Real life is a lot more complicated than
+  that</strong>. Small amounts of carbon monoxide are produced
+  routinely in your body and may serve a function as a
+  neurotransmitter. But at higher levels, it becomes very toxic. In
+  1965, a paper was published ("Coburn-Forster-Kane") that provided
+  an <strong>equation for estimating levels of hemoglobin bound up
+  with carbon monoxide ("COHb"), based on a variety of
+  factors</strong>. In case you're curious, the equation is:
+</p>
+
+\[
+\frac{A[HbCO]_t - (BV_{CO} + PI_{CO})}{A[HbCO]_0 - (BV_{CO} + PI_{CO})} = e^{-tAV_bB}
+\]
+
+<p>
+  It's not terribly important that you understand the whole equation
+  so I'll point out the the interesting parts. We're trying to solve
+  for \([HbCO]_t\), the concentration of carboxyhemoglobin in the
+  blood at any given time. First there's the presence of a term \(t\),
+  which means the <strong>duration of exposure to CO</strong>,
+  measured in minutes. This means that, in some way, the amount of
+  time you spend exposed to higher levels of carbon monoxide is
+  important. Then there's \(PI_{CO}\), which represents
+  the <strong>concentration of carbon monoxide in the air you're
+  breathing</strong>. Lastly there's \(B\), which tracks <strong>how
+  much air enters your lungs every minute</strong>. So the effect
+  depends on how fast you're breathing. Basically, exercise and other
+  vigorous activites make the whole process run faster. The rest of the
+  equation takes care of things like total volume of blood and how
+  much carbon monoxide is naturally present in the body.
+</p>
+
+<div class="row">
+  <div class="col-md-6">
+    <p>
+      Some smart people who are good at math have made graphs that
+      show how this equation works. The one on the right has been
+      shamelessly borrowed
+      from <a href="http://www.coheadquarters.com"
+	      title="Visit CO headquarters">CO Headquarters</a>.
+      It shows the
+      <strong>per cent of hemoglobin that's in the carbon monoxide form as a
+      function of time</strong>. Each curve is a different level of CO exposure
+      in the surrounding air. The World Health Organization has
+      published some
+      <a href="http://www.who.int/ipcs/publications/ehc/ehc_213/en/"
+	 title="WHO report on carbon monoxide">information</a> that is
+      helpful here. Levels of COHb below 5% have no noticeable
+      impact unless you are a member of an at-risk population
+      (heart-disease, etc). Severe symptoms occur between 30-50%
+      and bad things like coma, convulsions and death occur at
+      levels above 50%. So let's say you're pregnant and are
+      concerned about hitting the 15% COHb threshold at which the
+      WHO reports developmental problems. This means that if you're
+      exposed to 200ppm carbon monoxide in the air, you have about
+      300 minutes (5 hours) before the level of COHb hits 15%. At
+      500ppm this drops to 100 minutes (1 hour 40 minutes) and 1000
+      ppm to 30 minutes. Of course <strong>if any number of variables
+	change (breathing rate, etc), so do these numbers</strong>. Also, if
+      you get into fresh air, the concentration returns to normal
+      levels over a similar time frame.
+    <p>
+  </div>
+  <div class="col-md-6">
+    <img src="/images/posts/carboxyhemoglobin-graph.png"
+	 title="Graph of COHb levels versus exposure time" />
+    <p class="caption">
+      Solutions to the Coburn-Forster-Kane equation for various air
+      carbon monoxide levels. Each line is a different level of carbon
+      monoxide in the surrounding air.
+    </p>
+  </div>
+</div>
+
+<h2>How to Detect Carbon Monoxide</h2>
+
+<p>
+  So how does any of this impact carbon monoxide detectors?  A CO
+  level of 35 ppm can be problematic but only for extended periods of
+  time. <strong>The need to avoid false alarms is important</strong>,
+  especially in places like hospitals where evacuation has its own
+  problems. Cigarette smoke produces lots of carbon monoxide but you
+  wouldn't want your alarm going off every time you light one. Alarms
+  typically have a threshold that's a combination of CO concentration
+  and exposure time (eg "40 ppm, 12 minutes"). There are several ways
+  to achieve this but here's my favorite: <strong>the biomimetic
+  sensor</strong>. It uses a disc of gel that absorbs carbon monoxide
+  over time. The composition of the gel is designed in such a way that
+  it responds to carbon monoxide in a similar way to hemoglobin, hence
+  the term "biomimetic". It's made of an atom of metal (to simulate
+  the iron in hemoglobin) bound to a large organic molecule. Part of
+  the molecule holds the metal and another part, the "chromophore",
+  changes color depending on whether the metal is bound to carbon
+  monoxide. The color of the sensor then follows the curves in the
+  graph above. By putting a light source on one side and a detector on
+  the other, the darkness can be measured and the alarm triggered once
+  it hits a certain level. This type of alarm is the most reliable but
+  also expensive so most consumer products use other methods.
+</p>
