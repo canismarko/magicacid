@@ -1,172 +1,182 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }} | Magic Acid Blog</title>
-        <meta name="viewport" content="width=device-width">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }} | Magic Acid Blog</title>
+    <meta name="viewport" content="width=device-width">
 
-	<link rel="shortcut icon"
-	      href="/images/favicon.png" />
+    <link rel="shortcut icon"
+	  href="/images/favicon.png" />
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
-	{% if site.debug == true %}
-	<link rel="stylesheet/less" type="text/css" href="/css/magicacid.less">
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    {% if site.debug == true %}
+    <link rel="stylesheet/less" type="text/css" href="/css/magicacid.less">
 
-	<script src="/bower_components/less/dist/less-1.7.0.js" type="text/javascript"></script>
-	{% else %}
-	<link rel="stylesheet" type="text/css" href="/css/magicacid.css">
-	{% endif %}
+    <script src="/bower_components/less/dist/less-1.7.0.js" type="text/javascript"></script>
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="/css/magicacid.css">
+    {% endif %}
 
-	{% if site.analytics == true %}
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    {% if site.analytics == true %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-51287352-1', 'magicacid.com');
-	  ga('send', 'pageview');
+      ga('create', 'UA-51287352-1', 'magicacid.com');
+      ga('send', 'pageview');
 
-	</script>
-	{% endif %}
+    </script>
+    {% endif %}
 
-	<!-- Facebook integration -->
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1514043182149496&version=v2.0";
-	  fjs.parentNode.insertBefore(js, fjs);
-	  }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- Facebook integration -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1514043182149496&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
 
-    </head>
-    <body>
+  </head>
+  <body>
 
-      <div class="container">
-        <div class="header">
-	  <div class="logo">
-	    <a href="/">
-	      <img src="/images/logo.png" /></a>
-	  </div>
+    <div class="container">
+      <div class="header">
+	<div class="logo">
+	  <a href="/">
+	    <img src="/images/logo.png" /></a>
 	</div>
-
-	<nav class="navbar navbar-inverse" role="navigation">
-	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="/">
-		<span class="glyphicon glyphicon-home"></span>
-		Blog</a>
-	    </div>
-
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-		<li>
-		  <a href="/categories.html"
-		     title="Navigate to list of categories">Categories</a></li>
-		<li><a href="/about.html" title="Learn more about this blog">
-		    About</a></li>
-	      </ul>
-	      <ul class="nav navbar-nav navbar-right social-icons">
-		<!-- RSS Icons -->
-		<li>
-		  <a href="/feed.xml" title="RSS feed for the blog">
-		    <img src="/images/social-icons/rss_48.png" alt="RSS Icon" />
-		    <span class="icon-label">RSS Feed</span>
-		  </a>
-		</li>
-		<!-- Facebook icon -->
-		<li>
-		  <a href="https://www.facebook.com/m3wolf"
-		     title="Facebook page">
-		    <img src="/images/social-icons/facebook_48.png"
-			 alt="Facebook Icon" />
-		    <span class="icon-label">Visit me on Facebook</span>
-		  </a>
-		</li>
-
-		<!-- Twitter icon -->
-		<li>
-		  <a href="https://www.twitter.com/m3wolf"
-		     title="Twitter feed">
-		    <img src="/images/social-icons/twitter_48.png"
-			 alt="Twitter Icon" />
-		    <span class="icon-label">View the Twitter feed</span>
-		  </a>
-		</li>
-
-		<!-- E-mail icon -->
-		<li>
-		  <a href="mailto:mark.wolf.music@gmail.com">
-		    <img src="/images/social-icons/mail_48.png"
-			 alt="E-mail Icon" />
-		    <span class="icon-label">E-mail me</span>
-		  </a>
-		</li>
-	      </ul>
-	    </div>
-	  </div>
-	</nav>
-	<div class="main-panel">
-
-	  <!-- content -->
-          {{ content }}
-
-	  <!-- Disqus embedded code for comments -->
-	  {% if page.comments %}
-	  <div class="comments">
-	    <div class="panel-body">
-	      <div id="disqus_thread"></div>
-	      <script type="text/javascript">
-		/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-		var disqus_shortname = 'magicacid'; // Required - Replace example with your forum shortname
-
-		/* * * DON'T EDIT BELOW THIS LINE * * */
-		(function() {
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		})();
-	      </script>
-	      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-	    </div>
-	  </div>
-	{% endif %}
-	</div>
-
-	<div class="side-panel">
-	  <div class="sidebar-box">
-	    <div class="panel-heading">
-	      <h3 class="panel-title">Ask a Question</h3>
-	    </div>
-	    <div class="panel-body">
-	      <p>Have a question? Ask me to look into it
-		<strong>
-		<a href="/chemistry/ask-a-chemist/2014/05/23/ask-a-chemist.html"
-		   title="Ask a chemist thread">here</a>.</p></strong>
-	    </div>
-	  </div>
-	</div>
-
-        <div class="footer">
-        </div>
       </div>
 
-      <!-- Javascript -->
-      <script src="/bower_components/jquery/dist/jquery.js"></script>
-      <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <nav class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+	  <!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="/">
+	      <span class="glyphicon glyphicon-home"></span>
+	      Blog</a>
+	  </div>
 
-    </body>
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    <ul class="nav navbar-nav">
+	      <li>
+		<a href="/categories.html"
+		   title="Navigate to list of categories">Categories</a></li>
+	      <li><a href="/about.html" title="Learn more about this blog">
+		  About</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right social-icons">
+	      <!-- RSS Icons -->
+	      <li>
+		<a href="/feed.xml" title="RSS feed for the blog">
+		  <img src="/images/social-icons/rss_48.png" alt="RSS Icon" />
+		  <span class="icon-label">RSS Feed</span>
+		</a>
+	      </li>
+	      <!-- Facebook icon -->
+	      <li>
+		<a href="https://www.facebook.com/m3wolf"
+		   title="Facebook page">
+		  <img src="/images/social-icons/facebook_48.png"
+		       alt="Facebook Icon" />
+		  <span class="icon-label">Visit me on Facebook</span>
+		</a>
+	      </li>
+
+	      <!-- Twitter icon -->
+	      <li>
+		<a href="https://www.twitter.com/m3wolf"
+		   title="Twitter feed">
+		  <img src="/images/social-icons/twitter_48.png"
+		       alt="Twitter Icon" />
+		  <span class="icon-label">View the Twitter feed</span>
+		</a>
+	      </li>
+
+	      <!-- E-mail icon -->
+	      <li>
+		<a href="mailto:mark.wolf.music@gmail.com">
+		  <img src="/images/social-icons/mail_48.png"
+		       alt="E-mail Icon" />
+		  <span class="icon-label">E-mail me</span>
+		</a>
+	      </li>
+	    </ul>
+	  </div>
+	</div>
+      </nav>
+      <div class="main-panel">
+
+	<!-- content -->
+        {{ content }}
+
+	<!-- Disqus embedded code for comments -->
+	{% if page.comments %}
+	<div class="comments">
+	  <div class="panel-body">
+	    <div id="disqus_thread"></div>
+	    <script type="text/javascript">
+	      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	      var disqus_shortname = 'magicacid'; // Required - Replace example with your forum shortname
+
+	      /* * * DON'T EDIT BELOW THIS LINE * * */
+	      (function() {
+	      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	      })();
+	    </script>
+	    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+	  </div>
+	</div>
+	{% endif %}
+      </div>
+
+      <div class="side-panel">
+	<div class="sidebar-box">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Ask a Question</h3>
+	  </div>
+	  <div class="panel-body">
+	    <p>Have a question? Ask me to look into it
+	      <strong>
+		<a href="/chemistry/ask-a-chemist/2014/05/23/ask-a-chemist.html"
+		   title="Ask a chemist thread">here</a>.</p></strong>
+	  </div>
+	</div>
+	<div class="sidebar-box">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">About the Author</h3>
+	  </div>
+	  <div class="panel-body">
+	    <img src="/images/headshot.png" alt="headshot of the author" />
+	    <p><strong>Mark Wolf</strong> is a grad student at the
+	    University of Illinois at Chicago studying chemistry.</p>
+	  </div>
+	</div>
+      </div>
+
+      <div class="footer">
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  </body>
 </html>
