@@ -9,7 +9,7 @@ css/magicacid.css: css/magicacid.less
 	lessc --clean-css css/magicacid.less css/magicacid.css
 
 deploy: all
-	rsync -alvz --del _site/ $(REMOTE)
+	rsync -alvz --exclude 'bower_components' --del _site/ $(REMOTE)
 
 serve:
 	jekyll serve --watch
