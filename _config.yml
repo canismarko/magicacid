@@ -5,6 +5,7 @@ highlighter: pygments
 url: "http://localhost:8000"
 debug: True
 email: "mark.wolf.music@gmail.com"
+excerpt_separator: "<!-- more -->"
 
 defaults:
   -
