@@ -1,5 +1,5 @@
 ---
-categories: [chemistry, TA, physics]
+categories: [chemistry, Teaching, physics]
 title: "Entropy of the Universe"
 layout: post
 ---
