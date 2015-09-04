@@ -5,6 +5,7 @@ body {
     background-image: url('/images/blog-hemoglobin.png');
     background-repeat: no-repeat;
     background-position: right top;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 #home {
@@ -144,4 +145,11 @@ ol.footnotes {
 
 .side-panel {
     .make-md-column(3);
+}
+
+/* Printable version */
+@media print{
+    h2 {
+	color: red
+    }
 }

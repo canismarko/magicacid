@@ -1,6 +1,6 @@
 ---
 title: "GSAS-II Introduction - Basic Profile Refinement"
-category: [X-Ray Diffraction]
+category: [X-Ray-Diffraction]
 layout: post
 ---
 
@@ -21,41 +21,55 @@ layout: post
   the amount of information obtained is limited.
 </p>
 
+<p>
+  In this tutorial, I will refine a corundum scan taken on our Bruker
+  D8 Discover ("Alice"). The diffractogram can be downloaded
+  in
+  <a href="/supporting-files/corundum.xye" title="Download corundum xye file">
+    .xye format</a>. You may also want to look at
+    the <a href="/supporting-files/basic-refinement.gpx">finished
+    GSAS-II project</a>.
+</p>
+
 <!-- more -->
 
 <h2>Installation</h2>
 
 <p>
-  Visit the GSAS-II website and follow the installation instructions
-  for your platform (GNU/Linux, Windows, MacOS). Arch Linux users can
-  install gsas2-svn from the arch user repository. Upon running
-  GSAS-II for the first time, you should see a terminal window and
-  several empty windows, similar to the screen shot below.
+  Visit
+  the <a href="https://subversion.xor.aps.anl.gov/trac/pyGSAS">GSAS-II
+  website</a> and follow the installation instructions for your
+  platform (GNU/Linux, Windows, MacOS). Arch Linux users can install
+  <span class="value">gsas2-svn</span> from
+  the <a href="https://aur.archlinux.org/packages/gsas2-svn/">arch
+  user repository</a>. Upon running GSAS-II for the first time, you
+  should see a terminal window and several empty windows, similar to
+  the screen shot below.
 </p>
 
 <img src="/images/posts/blank-refinement.png" class="img-responsive"
      alt="Screenshot of new refinement project" />
 
 <p>
-  The terminal window will not be used, although it can provide useful
-  information if a fit is not proceeding well. The other two windows
-  are known as the <span class="heading">plotting window</span> and
-  the <span class="heading">data tree</span> window. They are
-  currently empty since we have nothing to refine yet.
+  The terminal window is not normally used, though it can provide
+  useful information if your refinement is not succeeding. The other
+  two windows are the <span class="heading">plotting
+  window</span> and the <span class="heading">data tree</span>
+  window. They are currently empty since we have not yet imported any data.
 </p>
 
 <h2>Load Powder Data</h2>
 
 <p>
-  First we must load a powder data file to refine against. It is
-  recommended to export data from Eva as a .xye file. In the data tree
-  window, select <span class="menu">Import → Powder Data → guess
-  format from file</span>. The first dialog to appear will ask you to
-  choose the file containing the powder diffraction data. The second
-  dialog asks for an instrument parameter file. If you do not have an
-  instrument file, click Cancel and you are prompted to choose a
-  generic instrument (eg. CuKα). You should now see your data listed
-  in the data tree window.
+  First we must load a powder data file to refine against. First,
+  export your data from Eva as a <span class="value">.xye</span>
+  file. In the data tree window, select <span class="menu">Import →
+  Powder Data → guess format from file</span>. The first dialog to
+  appear will ask you to choose the file containing the powder
+  diffraction data. The second dialog asks for an instrument parameter
+  file. If you do not have an instrument file, click Cancel and you
+  are prompted to choose a generic instrument (eg. CuKα). You should
+  now see your data listed in the data tree window.
 </p>
 
 <h2>Create Phase Object(s)</h2>
@@ -63,9 +77,9 @@ layout: post
 <p>
   The next step is to create a phase object that can be refined
   against the powder data. There are two options for this: importing a
-  .cif file and creating a blank phase. Once the phase has been
-  created you should see an entry for it in the data tree window (you
-  may have to expand the Phases entry.
+  <span class="value">.cif</span> file or creating a blank
+  phase. Once the phase has been created you should see an entry for
+  it in the data tree window (you may have to expand the Phases entry.
 </p>
 
 <h3>Importing a Phase from a .cif File</h3>
