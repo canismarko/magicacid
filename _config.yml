@@ -1,6 +1,6 @@
 name: Magic Acid
 description: "My blog. Chemistry and stuff"
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 url: "http://localhost:8000"
 debug: True
