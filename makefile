@@ -12,4 +12,4 @@ deploy: all
 	rsync -alvz --exclude 'bower_components' --del _site/ $(REMOTE)
 
 serve:
-	jekyll serve --watch
+	jekyll serve --watch --drafts --config _config.yml
