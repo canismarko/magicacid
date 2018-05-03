@@ -125,7 +125,8 @@
         {{ content }}
 
 	<!-- Disqus embedded code for comments -->
-	{% if page.comments %}
+	{% if layout.comments %}
+	{% unless page.no_comments %}
 	<div class="comments" id="comments">
 	  <div class="panel-body">
 	    <div id="disqus_thread"></div>
@@ -144,6 +145,7 @@
 	    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 	  </div>
 	</div>
+	{% endunless %}
 	{% endif %}
       </div>
 

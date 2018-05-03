@@ -6,7 +6,7 @@ all: css/magicacid.css
 	$(BUILD)
 
 css/magicacid.css: css/magicacid.less
-	lessc --clean-css css/magicacid.less css/magicacid.css
+	lessc css/magicacid.less > css/magicacid.css
 
 deploy: all
 	rsync -alvz --exclude 'bower_components' --del _site/ $(REMOTE)
