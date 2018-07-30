@@ -1,2 +1,5 @@
 [project]
 name = magicacid
+
+[packages]
+lektor-webpack-support = 0.5

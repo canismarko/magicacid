@@ -1,3 +1,5 @@
 _site
 *~
 bower_components/
+webpack/node_modules/
+*package-lock.json*
