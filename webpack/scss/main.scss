@@ -42,30 +42,30 @@ body {
 }
 
 .social-icons {
-    li {
-	display: inline;
+    img {
+	width: 40px;
     }
     li a {
-	padding: 4px;
+	display: inline-block;
 	&:hover {
-	    padding: 0px;
+	    margin: -4px;
+	    margin-top: -4px;
+	    margin-bottom: -4px;
 	    img {
 		width: 48px;
 	    }
 	}
-    }
-    img {
-	width: 40px;
-    }
-    @include media-breakpoint-up(sm) {
-	.icon-label {
-	    display: none;
+	@include media-breakpoint-up(md) {
+	    .icon-label {
+		display: none;
+	    }
 	}
     }
 }
 
 .sidebar-box {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     @extend .card;
     img {
 	@extend .img-fluid;
@@ -153,12 +153,5 @@ ol.footnotes {
     @include make-col-ready();
     @include media-breakpoint-up(md) {
 	@include make-col(4);
-    }
-}
-
-/* Printable version */
-@media print{
-    h2 {
-	color: red
     }
 }

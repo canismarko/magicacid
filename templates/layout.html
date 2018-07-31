@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <link rel="stylesheet"
-	  href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.min.css"
-	  integrity="sha256-vl+0p/Z28RcVvC+cofUiIeYusGdOc4CXk/taqgQ2/XU=" crossorigin="anonymous" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous" />
+h
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css"
 	  integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z"
 	  crossorigin="anonymous">
@@ -23,8 +20,6 @@
     <link rel="shortcut icon"
 	  href="{{ '/static/favicon.png'|asseturl }}" />
 
-    <!-- syntax highlighting CSS -->
-
     {% if site.analytics == true %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -38,7 +33,7 @@
     </script>
     {% endif %}
 
-    <!-- Facebook integration -->
+    Facebook integration
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -52,192 +47,126 @@
 
   <body>
     <div class="container">
-	<div class="header">
-	  <div class="logo">
-	    <a href="/">
-	      <img src="{{ '/static/logo.png'|asseturl }}" /></a>
-	  </div>
-	</div>
+      <div class="header">
+      	<div class="logo">
+      	  <a href="/">
+      	    <img src="{{ '/static/logo.png'|asseturl }}" /></a>
+      	</div>
+      </div>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarText">
-	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item active">
-		<a class="nav-link" href="#">
-		  <i class="fas fa-home"></i>Blog <span class="sr-only">(current)</span>
-		</a>
-	      </li>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<!-- <a class="navbar-brand" href="/"></a> -->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+	  <ul class="navbar-nav mr-auto">
+	    <li class="nav-item active">
+	      <a class="nav-link" href="/"><i class="fas fa-home"></i> Blog <span class="sr-only">(current)</span></a>
+	    </li>
+	    <li class="nav-item">
+	      <a href="/categories.html" class="nav-link"
+		 title="Navigate to list of categories">Categories</a>
+	    </li>
+	    <li class="nav-item">
+	      <a href="/about.html" class="nav-link" title="Learn more about this blog">
+		  About</a></li>
+	  </ul>
+	  <ul class="navbar-nav social-icons">
+	    <!-- RSS Icon -->
 	      <li class="nav-item">
-		<a class="nav-link" href="#">Features</a>
-	      </li>
-	      <li class="nav-item">
-		<a class="nav-link" href="#">Pricing</a>
-	      </li>
-	    </ul>
-
-	    <ul class="social-icons">
-	      <!-- RSS Icons -->
-	      <li>
-		<a href="/feed.xml" title="RSS feed for the blog">
+		<a href="/feed.xml" title="RSS feed for the blog" class="nav-link">
 		  <img src="{{ '/static/social-icons/rss_48.png'|asseturl }}" alt="RSS Icon" />
 		  <span class="icon-label">RSS Feed</span>
 		</a>
 	      </li>
 	      <!-- Facebook icon -->
-	      <li>
+	      <li class="nav-item">
 		<a href="https://www.facebook.com/m3wolf"
-		   title="Facebook page">
+		   title="Facebook page" class="nav-link">
 		  <img src="{{ '/static/social-icons/facebook_48.png'|asseturl }}"
 		       alt="Facebook Icon" />
 		  <span class="icon-label">Visit me on Facebook</span>
 		</a>
 	      </li>
-
-	      <!-- Twitter icon -->
-	      <li>
-		<a href="https://www.twitter.com/m3wolf"
-		   title="Twitter feed">
-		  <img src="{{ '/static/social-icons/twitter_48.png'|asseturl }}"
-		       alt="Twitter Icon" />
-		  <span class="icon-label">View the Twitter feed</span>
-		</a>
+	      <!-- <\!-- Twitter icon -\-> -->
+	      <li class="nav-item">
+	      	<a href="https://www.twitter.com/m3wolf"
+	      	   title="Twitter feed" class="nav-link">
+	      	  <img src="{{ '/static/social-icons/twitter_48.png'|asseturl }}"
+	      	       alt="Twitter Icon" />
+	      	  <span class="icon-label">View the Twitter feed</span>
+	      	</a>
 	      </li>
 
 	      <!-- E-mail icon -->
-	      <li>
-		<a href="mailto:{{ site.email }}">
+	      <li class="nav-item">
+		<a href="mailto:{{ site.email }}"
+		   title="E-mail me" class="nav-link">
 		  <img src="{{ '/static/social-icons/mail_48.png'|asseturl }}"
 		       alt="E-mail Icon" />
 		  <span class="icon-label">E-mail me</span>
 		</a>
 	      </li>
-	    </ul>
-	  </div>
-	<!-- 	<div class="container-fluid"> -->
-	<!-- 	  <\!-- Brand and toggle get grouped for better mobile display -\-> -->
-	<!-- 	  <div class="navbar-header"> -->
-	<!-- 	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> -->
-	<!-- 	      <span class="sr-only">Toggle navigation</span> -->
-	<!-- 	      <span class="icon-bar"></span> -->
-	<!-- 	      <span class="icon-bar"></span> -->
-	<!-- 	      <span class="icon-bar"></span> -->
-	<!-- 	    </button> -->
-	<!-- 	    <a class="navbar-brand" href="/"> -->
-	<!-- 	      <span class="glyphicon glyphicon-home"></span> -->
-	<!-- 	      Blog</a> -->
-	<!-- 	  </div> -->
-
-	<!-- 	  <\!-- Collect the nav links, forms, and other content for toggling -\-> -->
-	<!-- 	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
-	<!-- 	    <ul class="nav navbar-nav"> -->
-	<!-- 	      <li> -->
-	<!-- 		<a href="/categories.html" -->
-	<!-- 		   title="Navigate to list of categories">Categories</a></li> -->
-	<!-- 	      <li><a href="/about.html" title="Learn more about this blog"> -->
-	<!-- 		  About</a></li> -->
-	<!-- 	      <\!-- <li><a href="/chem114/" title="Resources related to general chemistry II">Chem 114</a></li> -\-> -->
-	<!-- 	    </ul> -->
-	<!-- 	    <ul class="nav navbar-nav navbar-right social-icons"> -->
-	<!-- 	      <\!-- RSS Icons -\-> -->
-	<!-- 	      <li> -->
-	<!-- 		<a href="/feed.xml" title="RSS feed for the blog"> -->
-	<!-- 		  <img src="{{ '/static/social-icons/rss_48.png'|asseturl }}" alt="RSS Icon" /> -->
-	<!-- 		  <span class="icon-label">RSS Feed</span> -->
-	<!-- 		</a> -->
-	<!-- 	      </li> -->
-	<!-- 	      <\!-- Facebook icon -\-> -->
-	<!-- 	      <li> -->
-	<!-- 		<a href="https://www.facebook.com/m3wolf" -->
-	<!-- 		   title="Facebook page"> -->
-	<!-- 		  <img src="{{ '/static/social-icons/facebook_48.png'|asseturl }}" -->
-	<!-- 		       alt="Facebook Icon" /> -->
-	<!-- 		  <span class="icon-label">Visit me on Facebook</span> -->
-	<!-- 		</a> -->
-	<!-- 	      </li> -->
-
-	<!-- 	      <\!-- Twitter icon -\-> -->
-	<!-- 	      <li> -->
-	<!-- 	      	<a href="https://www.twitter.com/m3wolf" -->
-	<!-- 	      	   title="Twitter feed"> -->
-	<!-- 	      	  <img src="{{ '/static/social-icons/twitter_48.png'|asseturl }}" -->
-	<!-- 	      	       alt="Twitter Icon" /> -->
-	<!-- 	      	  <span class="icon-label">View the Twitter feed</span> -->
-	<!-- 	      	</a> -->
-	<!-- 	      </li> -->
-
-	<!-- 	      <\!-- E-mail icon -\-> -->
-	<!-- 	      <li> -->
-	<!-- 		<a href="mailto:{{ site.email }}"> -->
-	<!-- 		  <img src="{{ '/static/social-icons/mail_48.png'|asseturl }}" -->
-	<!-- 		       alt="E-mail Icon" /> -->
-	<!-- 		  <span class="icon-label">E-mail me</span> -->
-	<!-- 		</a> -->
-	<!-- 	      </li> -->
-	<!-- 	    </ul> -->
-	<!-- 	  </div> -->
-	<!-- 	</div> -->
-	<!-- </nav> -->
-	</nav>
-
-	<div class="row">
-	  <div class="main-panel">
-	    <!-- content -->
-	    {% block body %}{% endblock %}
-
-	    <!-- Disqus embedded code for comments -->
-	    <div class="comments" id="comments">
-	      <div class="card-body">
-		<div id="disqus_thread"></div>
-		<script type="text/javascript">
-		  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-		  var disqus_shortname = 'magicacid'; // Required - Replace example with your forum shortname
-
-		  /* * * DON'T EDIT BELOW THIS LINE * * */
-		  (function() {
-		  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		  })();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-		<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-	      </div>
-	    </div>
-	  </div>
-
-	  <div class="side-panel">
-
-	    <div class="sidebar-box">
-	      <div class="card-header">
-		<h3 class="card-title">About the Author</h3>
-	      </div>
-	      <div class="card-body">
-		<img src="{{ '/static/headshot.jpg'|asseturl }}" alt="headshot of the author" />
-		<p class="card-text"><strong>Mark Wolfman</strong> is a
-		  PhD candidate at the University of Illinois at Chicago
-		  studying chemistry.</p>
-	      </div>
-	    </div>
-	  </div>
+	  </ul>
 	</div>
+      </nav>
 
-	<div class="footer">
-      </div>
-    </div>
+
+      <div class="row">
+      	<div class="main-panel">
+      	  <!-- content -->
+      	  {% block body %}{% endblock %}
+
+      	  <!-- Disqus embedded code for comments -->
+      	  <div class="comments" id="comments">
+      	    <div class="card-body">
+      	      <div id="disqus_thread"></div>
+      	      <script type="text/javascript">
+      		/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      		var disqus_shortname = 'magicacid'; // Required - Replace example with your forum shortname
+
+      		/* * * DON'T EDIT BELOW THIS LINE * * */
+      		(function() {
+      		    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      		    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      		    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      		})();
+      	      </script>
+      	      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      	      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+      	    </div>
+      	  </div>
+      	</div><!-- /.main-panel -->
+
+      	<div class="side-panel">
+
+      	  <div class="sidebar-box">
+      	    <div class="card-header">
+      	      <h3 class="card-title">About the Author</h3>
+      	    </div>
+      	    <div class="card-body">
+      	      <img src="{{ '/static/headshot.jpg'|asseturl }}" alt="headshot of the author" />
+      	      <p class="card-text"><strong>Mark Wolfman</strong> is a
+      		PhD candidate at the University of Illinois at Chicago
+      		studying chemistry.</p>
+      	    </div>
+      	  </div>
+      	</div><!-- /.side-panel -->
+      </div><!-- /.row -->
+
+      <div class="footer">
+      </div><!-- /.footer -->
+    </div><!-- /.container -->
 
     <!-- Javascript -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
 	    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.3.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" -->
+    <!-- 	    crossorigin="anonymous"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha256-98vAGjEDGN79TjHkYWVD4s87rvWkdWLHPs5MC3FvFX4=" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"
 	    integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.3.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-	    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.min.js"
-	    integrity="sha256-DzpvKOEeOJNtINqa/4ECj7aloa320UfT+ElBT+qloFc=" crossorigin="anonymous"></script>
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.3.0/MathJax.js"></script> -->
-
   </body>
 </html>
