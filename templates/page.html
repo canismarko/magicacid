@@ -1,6 +1,29 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-  <h2>{{ this.title }}</h2>
-  {{ this.body }}
+  <div class="page-content">
+    <!-- content -->
+    <h2>{{ this.title }}</h2>
+    {{ this.body }}
+
+    {% if this.comments %}
+    {% include 'comments.html' %}
+    {% endif %}
+  </div><!-- /.main-panel -->
+  
+  <!-- <div class="side-panel"> -->
+    
+  <!--   <div class="sidebar-box"> -->
+  <!--     <div class="card-header"> -->
+  <!--     	<h3 class="card-title">About the Author</h3> -->
+  <!--     </div> -->
+  <!--     <div class="card-body"> -->
+  <!--     	<img src="{{ '/static/headshot.jpg'|asseturl }}" alt="headshot of the author" /> -->
+  <!--     	<p class="card-text"><strong>Mark Wolfman</strong> is a -->
+  <!--     	  PhD candidate at the University of Illinois at Chicago -->
+  <!--     	  studying chemistry.</p> -->
+  <!--     </div> -->
+  <!--   </div> -->
+  <!-- </div><\!-- /.side-panel -\-> -->
+
 {% endblock %}

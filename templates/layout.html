@@ -55,18 +55,18 @@ h
       </div>
 
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-	<!-- <a class="navbar-brand" href="/"></a> -->
+	<a class="navbar-brand" href="/"><img src="{{ '/static/favicon.png'|asseturl }}" />agic Acid</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse" id="navbarNav">
 	  <ul class="navbar-nav mr-auto">
 	    <li class="nav-item active">
-	      <a class="nav-link" href="/"><i class="fas fa-home"></i> Blog <span class="sr-only">(current)</span></a>
+	      <a class="nav-link" href="/"><i class="fas fa-paragraph"></i> Blog<span class="sr-only">(current)</span></a>
 	    </li>
 	    <li class="nav-item">
 	      <a href="/categories.html" class="nav-link"
-		 title="Navigate to list of categories">Categories</a>
+		 title="Navigate to list of categories"><i class="fas fa-list-ul"></i> Categories</a>
 	    </li>
 	    <li class="nav-item">
 	      <a href="/about.html" class="nav-link" title="Learn more about this blog">
@@ -112,48 +112,7 @@ h
 	</div>
       </nav>
 
-
-      <div class="row">
-      	<div class="main-panel">
-      	  <!-- content -->
-      	  {% block body %}{% endblock %}
-
-      	  <!-- Disqus embedded code for comments -->
-      	  <div class="comments" id="comments">
-      	    <div class="card-body">
-      	      <div id="disqus_thread"></div>
-      	      <script type="text/javascript">
-      		/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      		var disqus_shortname = 'magicacid'; // Required - Replace example with your forum shortname
-
-      		/* * * DON'T EDIT BELOW THIS LINE * * */
-      		(function() {
-      		    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      		    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      		    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      		})();
-      	      </script>
-      	      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      	      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-      	    </div>
-      	  </div>
-      	</div><!-- /.main-panel -->
-
-      	<div class="side-panel">
-
-      	  <div class="sidebar-box">
-      	    <div class="card-header">
-      	      <h3 class="card-title">About the Author</h3>
-      	    </div>
-      	    <div class="card-body">
-      	      <img src="{{ '/static/headshot.jpg'|asseturl }}" alt="headshot of the author" />
-      	      <p class="card-text"><strong>Mark Wolfman</strong> is a
-      		PhD candidate at the University of Illinois at Chicago
-      		studying chemistry.</p>
-      	    </div>
-      	  </div>
-      	</div><!-- /.side-panel -->
-      </div><!-- /.row -->
+      {% block body %}{% endblock %}
 
       <div class="footer">
       </div><!-- /.footer -->

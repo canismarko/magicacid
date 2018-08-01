@@ -1,6 +1,17 @@
-title: Welcome to magicacid!
+_model: page
+---
+title: Welcome to MagicAcid!
+---
+comments: no
 ---
 body:
 
-This is a basic demo website that shows how to use Lektor for a basic
-website with some pages and a blog.
+<div class="row">
+  <div class="col-md-8">
+  </div>
+  <div class="col-md-4">
+    <img src="/static/headshot.jpg"
+	 alt="Mark headshot"
+	 class="img-fluid" />
+  </div>
+---

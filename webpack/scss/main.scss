@@ -8,6 +8,8 @@
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/navbar";
 
+$card-margin: 15px;
+
 body {
     background-color: black;
     background-image: url('/static/blog-hemoglobin.png');
@@ -16,20 +18,20 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-#home {
-    @include make-row();
-    .post-excerpt {
-	@extend .card;
-	.card-heading h2 {
-	    display: block;
-	    font-size: 14pt;
-	    margin: 10px 0px;
-	}
-	img {
-	    @extent .img-fluid;
-	}
-    }
-}
+// #home {
+//     @include make-row();
+//     .post-excerpt {
+// 	@extend .card;
+// 	.card-heading h2 {
+// 	    display: block;
+// 	    font-size: 14pt;
+// 	    margin: 10px 0px;
+// 	}
+// 	img {
+// 	    @extent .img-fluid;
+// 	}
+//     }
+// }
 
 .header {
     margin: 10px 0px;
@@ -106,9 +108,11 @@ body {
     @extend .card;
 }
 
-.full-post {
+.blog-post {
     @extend .card;
-    .card-heading {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .card-header {
 	h2 {
 	    margin-top: 10px;
 	}
@@ -129,6 +133,12 @@ ol.footnotes {
     font-size: 80%;
 }
 
+.meta {
+    font-size: 80%;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
 .comments {
     @extend .card;
 }
@@ -140,6 +150,12 @@ ol.footnotes {
     @extend .badge;
     @extend .badge-secondary;;
     @extend .category;
+}
+
+.page-content {
+    background-color: white;
+    margin-top: $card-margin;
+    padding: $card-margin;
 }
 
 .main-panel {
