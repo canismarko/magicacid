@@ -1,7 +1,8 @@
+{% from "macros/share_buttons.html" import add_share_buttons %}
+
 {% macro render_blog_post(post, from_index=false) %}
 <div class="blog-post">
   <div class="card-header">
-    {{ post._model }}
     {% if from_index %}
     <h3><a href="{{ post|url }}">{{ post.title }}</a></h3>
     {% else %}
@@ -17,9 +18,34 @@
       {% endif %}
       on {{ post.pub_date }}
     </p>
+    {% if not from_index %}
+    <p class="share-buttons">
+      Share buttons
+    </p>
+    {% endif %}
   </div>
   <div class="card-body">
+    {% if from_index %}
+    {{ post.body|excerpt('<!-- more -->') }}
+    {% else %}
     {{ post.body }}
+    {% endif %}
+
+    <p>
+      <a href="{{ post|url }}" title="Read full post">read more...</a>
+    </p>
+
+    {% if not from_index and post.comments %}
+    <hr />
+    {% include 'comments.html' %}
+    {% endif %}
   </div>
+
+  
+  <div class="card-footer">
+    {% if from_index %}
+    {{ add_share_buttons(post) }}
+    {% endif %}
   </div>
+</div>
 {% endmacro %}

@@ -1,0 +1,243 @@
+ext: html
+---
+pub_date: 2015-01-16
+---
+title: A Computer for Chemistry Data Analysis
+---
+layout: post
+---
+body:
+
+
+<div class="row">
+  <div class="col-md-8">
+    <p>
+      I've been tasked with finding a new computer for my PhD research
+      here at UIC. I'll be collecting <strong>multiple data
+      frames</strong> and then <strong>processing and combining
+      them</strong> into one image; I think it's worth the time to get
+      this right. If you have anything to share on the issue, feel
+      free to <a href="{{ page.url }}#comments" title="jump down to comments
+      section">leave a comment</a>. I wasn't given many restrictions
+      other than that it must have a monitor, keyboard and mouse (for
+      ergonomic reasons) and that &ldquo;$1000 is on the high end but
+      reasonable&rdquo;. I've spent the past few days researching
+      current technologies and have come up with some suggestions. All
+      of the products listed will probably by obsolete by the time I'm
+      done writing this, but hopefully the background will still be
+      valid for a while. If you want to see specifically which parts
+      I'm considering, <a href="{{ page.url }}#parts-list">jump straight
+      to the parts list</a>.
+    </p>
+  </div>
+  <div class="col-md-4">
+    <a href="https://en.wikipedia.org/wiki/Amiga#mediaviewer/File:Amiga500_system.jpg"
+       title="&copy; 2006 Bill Bertram">
+      <img src="/images/posts/amiga.jpg" class="img-responsive" alt="Amiga 500" />
+    </a>
+  </div>
+</div>
+
+<!-- more -->
+
+<h2>Requirements</h2>
+
+<p>
+  The first step in finding the right computer is deciding what this
+  computer actually needs to do. My research centers around mapping
+  the 2D and 3D changes that occur in a battery electrode. I will use
+  an X-ray microdiffractometer to measure the structure on a spot
+  approximately 100&micro;m across. This will be repeated several times
+  in various places. Each location will result in roughly 1 MB of
+  data. The first step will be to integrate each two-dimensional
+  data-set into a one-dimensional spectrum, so I need my computer to
+  be good at mathematical calculations. Since I'll be processing
+  multiple independent spectra, I also want it to be amenable to
+  parallel computing. I would like to leave the option open of using
+  something like <a href="http://mathema.tician.de/software/pycuda/"
+  title="PyCUDA package homepage">PyCUDA</a> if I come across a nice
+  graphics card. UIC does have a super-computer that I can use at
+  times, so if I need more than my computer can provide I have that
+  option.
+</p>
+
+<h2>Processor and Motherboard</h2>
+<p>
+  Right now I'm looking at the Haswell CPU architecture, which gives
+  me the choice of a Core i3, i5 or i7. The i7 line has
+  hyper-threading, which is the ability to run multiple threads on each
+  core and make good use of processor downtime; seems like something
+  that would help me. The big difference between the different i7's is
+  their choice of memory, DDR3 <i>vs</i> DDR4. This affects the choice
+  of motherboard, and obviously memory. The Haswell-E processors
+  (5960K, 5930K, 5820K) have either six or eight cores versus four
+  cores in the 4790K. Remember, all the i7's have hyper-threading so
+  they can run 12, 16 and 8 threads respectively. The 4790 and 4790K
+  differ mostly in the sense that the 4790K can be overclocked. For an
+  extra $30, I think I will give myself this option.
+</p>
+
+<p>
+  The motherboards for these processors come in two flavors. One has
+  the LGA 2011-v3 socket, which fits the newer Haswell-E line, and
+  uses DDR4 memory; the other uses the 1150 socket with DDR3 and
+  processors of the regular Haswell type. The former has more cores
+  but the parts (CPU, motherboard and memory) are more expensive. I've
+  decided on the regular Haswell setup. A graphics card is designed to
+  do small repetitive tasks very quickly and can be used for fast data
+  processing. A motherboard with a PCI-Ex16 slot will make that
+  possible in the future. Boards with the Intel Z97 chip-set support
+  overclocking (compared the the H97 chip-set). I'm not sure if I'll
+  use this but why not get it anyway, right?
+</p>
+
+<a href="http://www.anandtech.com/show/8426/the-intel-haswell-e-cpu-review-core-i7-5960x-i7-5930k-i7-5820k-tested">
+  <img src="http://images.anandtech.com/doci/8426/1%20-%20Processors_575px.png"
+       class="img-responsive" />
+</a>
+
+<h2>Memory</h2>
+<p>
+  So motherboard selection will be determined in part by whether I get
+  DDR3 or DDR4. DDR4 is the new successor to DDR3. There are not as
+  many options available yet and it's more expensive. It's a little
+  bit faster and uses significantly less power. I checked out the
+  performance tests in the video below and it looks like the speed
+  benefits only become significant with six or more cores. This fits
+  well with the processor section since the one that uses DDR3 has
+  four cores and the DDR4-class processors have six. I'm leaning
+  towards the 4-core DDR3 setup as a better value.
+</p>
+
+<!-- DDR4 vs DDR3 video -->
+<p>
+  <iframe src="//www.youtube.com/embed/Pvac1AFXeWM"
+	  width="560" height="315" frameborder="0" allowfullscreen></iframe>
+</p>
+
+<h2>Hard Drive</h2>
+<p>
+  I'm sold on using a solid-state drive (SSD) for holding system
+  files. I love the fast boot time and snappy application loading. An
+  SSD connected by PCI-express would be great, although I think I'll
+  go for SATA III to save a few bucks. With the massive speed gains of
+  SSDs compared to convention hard-drives, the interface itself is now
+  the bottle-neck. A PCI-Express SSD would make my system a little
+  more responsive but right now they cost several hundred dollars. To
+  complement the SSD, I have a 1 TB conventional hard disk drive (HDD)
+  that I will put in for data storage. Hopefully transferring data from
+  the HDD to memory will not be too slow. If it is I may have to
+  transfer the active project from the slow HDD to the fast SSD before
+  performing that analysis.
+</p>
+
+<h2>Operating System</h2>
+
+<p>
+  The real question here is whether I need to run anything that
+  absolutely won't run on GNU/Linux. Those of you that know me know
+  that I'm a big Linux fan-boy and really don't like Windows. The first
+  thing that I'll be doing is installing Arch Linux. My plan right now
+  is to use Python to analyze most of these data, which is platform
+  agnostic. Some of the diffraction analysis software that is specific
+  to our instrument will only run on Windows. Hopefully, the Windows
+  emulator written for Linux (WINE), will be able to handle this
+  task. If not, I might have to buy a copy of Windows in the future *shudder*.
+</p>
+
+<h2>Power Supply (PSU)</h2>
+
+<p>
+  Every system needs enough power to run all the hardware inside of
+  it. The major consideration here is the maximum power that the PSU
+  can deliver. This number has to be greater than the power required
+  by all the components or things will get weird. I've dealt with
+  power supply issues in the past and they're a nightmare. There's
+  never a light that comes on saying "hey, you're
+  under-powered". Things will just sporadically stop working. The
+  computer might freeze or randomly restart itself. Maybe the whole
+  thing will just be sluggish and I won't know why. According to a
+  handy chart I found on
+  <a href="http://www.newegg.com/Product/CategoryIntelligenceArticle.aspx?articleId=199"
+  title="Newegg Guide for power supplies">Newegg</a>, I estimate I'll
+  need 350-400 W of power. The advantage I have is that I won't be
+  using a separate graphics card for now. The PSU I selected has a max
+  power rating of 550W so that should give me enough breathing
+  room. Beyond the maximum power consideration, there are some other
+  considerations, like efficiency and noise. I will rely mostly on
+  reviews for that information. I also like the idea of modular
+  cables. This lets me connect only the ones I need and will reduce
+  the clutter in the case.
+
+<h2 id="parts-list">My selections</h2>
+<p>
+  Here are the parts I'm considering. I haven't included the monitor
+  since this is just a peripheral that I can swap out at will.
+</p>
+<table class="table">
+  <tr>
+    <th>Function</th>
+    <th>Part</th>
+    <th>Cost</th>
+  </tr>
+  <tr>
+    <td>Processor</td>
+    <td>
+      <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16819117369"
+	 title="Link to part on Newegg">Intel Core i7-4790K Haswell</a>
+    </td>
+    <td>$339.99</td>
+  </tr>
+  <tr>
+    <td>Motherboard</td>
+    <td>
+      <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16813138408"
+	 title="Link to part on Newegg">Biostar Hi-Fi Z97WE</a>
+    </td>
+    <td>$114.99</td>
+  </tr>
+  <tr>
+    <td>Memory</td>
+    <td>
+      <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16820231314"
+	 title="Link to part on Newegg">2x4GB G.Skill Ripjaw Series DDR3</a>
+    </td>
+    <td>$72.99</td>
+  </tr>
+  <tr>
+    <td>Hard-drive (SSD)</td>
+    <td>
+      <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16820147371"
+	 title="Link to part on Newegg">Samsung 850 EVO-Series SSD</a>
+    </td>
+    <td>$90.00</td>
+  </tr>
+  <tr>
+    <td>SSD Mount</td>
+    <td>
+      <a href=""
+	 title="Link to part on Newegg">Icy Dock EZ-Fit Lite</a>
+    </td>
+    <td>$7.99</td>
+  </tr>
+  <tr>
+    <td>Case</td>
+    <td>
+      <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16811147153"
+	 title="Link to part on Newegg">Rosewill Challenger Black ATX Mid Tower</a>
+    </td>
+    <td>$49.99</td>
+  </tr>
+  <tr>
+    <td>Power Supply</td>
+    <td>
+      <a href="http://www.newegg.com/Product/Product.aspx?Item=N82E16817171092"
+	 title="Link to part on Newegg">Cooler Master V550</a>
+    </td>
+    <td>$89.99</td>
+  </tr>
+  <tr>
+    <th>&nbsp;</th>
+    <th>Total:</th>
+    <th>$765.94</th>
+</table>

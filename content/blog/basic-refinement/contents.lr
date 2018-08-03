@@ -1,0 +1,274 @@
+ext: html
+---
+pub_date: 2015-09-01
+---
+title: GSAS-II Introduction - Basic Profile Refinement
+---
+category: [X-Ray-Diffraction]
+---
+layout: post
+---
+body:
+
+
+<style>
+.heading,.tab {
+    font-style: italic;
+}
+.value,.menu {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+</style>
+
+<p>
+  This document will guide the user through a basic whole-pattern
+  decomposition of a single phase using the Pawley method. This method
+  is simpler than the Rietveld method and will provide a closer fit,
+  however the the refined parameters are not physically meaningful so
+  the amount of information obtained is limited.
+</p>
+
+<p>
+  In this tutorial, I will refine a corundum scan taken on our Bruker
+  D8 Discover ("Alice"). The diffractogram can be downloaded
+  in
+  <a href="/supporting-files/corundum.xye" title="Download corundum xye file">
+    .xye format</a>. You may also want to look at
+    the <a href="/supporting-files/basic-refinement.gpx">finished
+    GSAS-II project</a>.
+</p>
+
+<!-- more -->
+
+<h2>Installation</h2>
+
+<p>
+  Visit
+  the <a href="https://subversion.xor.aps.anl.gov/trac/pyGSAS">GSAS-II
+  website</a> and follow the installation instructions for your
+  platform (GNU/Linux, Windows, MacOS). Arch Linux users can install
+  <span class="value">gsas2-svn</span> from
+  the <a href="https://aur.archlinux.org/packages/gsas2-svn/">arch
+  user repository</a>. Upon running GSAS-II for the first time, you
+  should see a terminal window and several empty windows, similar to
+  the screen shot below.
+</p>
+
+<img src="/images/posts/blank-refinement.png" class="img-responsive"
+     alt="Screenshot of new refinement project" />
+
+<p>
+  The terminal window is not normally used, though it can provide
+  useful information if your refinement is not succeeding. The other
+  two windows are the <span class="heading">plotting
+  window</span> and the <span class="heading">data tree</span>
+  window. They are currently empty since we have not yet imported any data.
+</p>
+
+<h2>Load Powder Data</h2>
+
+<p>
+  First we must load a powder data file to refine against. First,
+  export your data from Eva as a <span class="value">.xye</span>
+  file. In the data tree window, select <span class="menu">Import →
+  Powder Data → guess format from file</span>. The first dialog to
+  appear will ask you to choose the file containing the powder
+  diffraction data. The second dialog asks for an instrument parameter
+  file. If you do not have an instrument file, click Cancel and you
+  are prompted to choose a generic instrument (eg. CuKα). You should
+  now see your data listed in the data tree window.
+</p>
+
+<h2>Create Phase Object(s)</h2>
+
+<p>
+  The next step is to create a phase object that can be refined
+  against the powder data. There are two options for this: importing a
+  <span class="value">.cif</span> file or creating a blank
+  phase. Once the phase has been created you should see an entry for
+  it in the data tree window (you may have to expand the Phases entry.
+</p>
+
+<h3>Importing a Phase from a .cif File</h3>
+
+<p>
+  If a .cif file is available for your material, this is the easier
+  option. The materials project may have one you can download for your
+  material. To import a .cif file, in the data tree window select the
+  menu <span class="menu">Import → Phase → from CIF file</span>. You
+  will be asked to associate this phase with one of more previously
+  imported data ("histogram"); you can select your powder data, or
+  wait to do so in the next section.
+</p>
+
+<h3>Creating a Blank Phase</h3>
+
+<p>
+  In the data tree window, select the menu Data → Add phase, you will
+  be prompted to name the phase.
+</p>
+
+<h3>Prepare for First Refinement</h3>
+
+<p>
+  Before running the first refinement cycle, it's necessary to set
+  some initial values. If you imported
+  a <span class="value">.cif</span> file, some of these may already be
+  set for you. This section assumes you have created a blank phase.
+</p>
+
+<p>
+  In the data-tree window select your phase from the Phases list. A
+  new data display window should appear. Select the Data tab. Enter
+  your space group in appropriate text box. GSAS-II requires
+  spacegroup terms to be separated by a space. The corundum spacegroup
+  (R-3c) is entered as "R -3 c". Press enter and confirm your
+  choice. You will now notice that your choices for unit-cell
+  parameters are restricted to <span class="heading">a</span>
+  and <span class="heading">c</span> due to the crystal system
+  associated with this spacegroup. Enter approximate unit-cell
+  parameters in the appropriate textboxes. Wikipedia lists a=4.75Å and
+  c=12.982Å for corundum so let's start there.  Farther down you will
+  find a section labeled <span class="heading">Pawley
+  controls</span>. Check the checkbox labeled <span class="heading">Do
+  Pawley Refinement</span>.
+</p>
+
+<p>
+  Next switch to the <span class="tab">Data</span> tab. If you see a message reading
+  ``This phase has no associated data'', you will first need to create
+  a histogram by selecting the menu Edit → Add powder histograms. In
+  the new dialog, select your powder data and click okay (skip this
+  step if you associated your data when importing a .cif file). Leave
+  the values in this tab at their defaults for now; we will come back
+  to them later.
+</p>
+
+<p>
+  We will now move to the <span class="tab">Pawley Reflections</span> tab. Select the
+    <span class="menu">Operations → Pawley create</span> menu entry to
+  automatically create a list of reflections
+  and <span class="menu">Operations → Pawley estimate</span> to have
+  GSAS set initial reflection intensities. The
+    <span class="heading">refine</span> column contains check boxes
+  that indicate which reflection intensities will be refined. Click on
+  the column heading to select them all and type "y" to check them.
+</p>
+
+<p>
+  Lastly, go back to the data-tree and under your powder data entry,
+  select the <span class="heading">Sample parameters</span> entry. In the data-display
+  dialog, uncheck the <span class="heading">Histogram scale factor</span> box. If
+  checked, GSAS will refine the intensities of the reflections as a
+  whole, which is unnecessary since we are already refining them
+  individually.
+</p>
+
+<h2>Evaluating Initial Fit</h2>
+
+<p>
+  You are now ready to run the initial refinement. In the data-tree
+  window, select the menu <span class="menu">Calculate → Refine</span> (you will be
+  prompted to save if you have not done so yet). Assuming the
+  refinement runs smoothly, you should be presented with a dialog
+  asking you to <span class="heading">Load new result?</span> (click
+  <span class="heading">Yes</span>). Click on the powder data entry in
+  the data-tree and inspect the results in the plotting window. You
+  may have to select the <span class="tab">Powder Patterns</span>
+  tab. You should see several overlayed plots showing the original
+  diffractogram, the calculated diffractogram, the background fit and
+  the difference between the observed and calculated diffractograms.
+</p>
+
+
+<div class="row">
+  <div class="col-md-7">
+    <p>
+      Chances are, your refinement is not very good at this point, but
+      maybe it's good enough. Use the zoom button along the bottom to
+      view several peaks close up. Along the center of the plot you
+      will see small vertical lines representing the predicted
+      reflections. Hopefully, your unit cell parameters are at least
+      close enough that the predicted reflections fall somewhere
+      within <em>most</em> of the peaks. If not, you may have to
+      manually adjust the cell parameters until you're close.
+      Something like the figure at the right should work. Select your
+      phase and go to the <span class="tab">General</span> tab,
+      check <span class="heading">Refine unit cell</span>. Also, for
+      your powder data, open the <span class="heading">Sample
+      Parameters</span> dialog. Change the diffractometer type
+      to <span class="value">Bragg-Brentano</span> and enable
+      refinement of <span class="heading">Sample
+      displacement</span>. This will help correct any errors due to
+      the sample not being mounted at the exact instrument center. Now
+      run the refinement again. You may have to re-select your powder
+      data in the data-tree to refresh the plot.
+    </p>
+  </div>
+  <div class="col-md-5">
+    <img src="/images/posts/peak-good-enough.png" class="img-responsive" />
+    <p class="caption">
+      Refinement after first pass. Shown are observed (blue),
+      calculated (green), background (red) and difference (teal).
+    </p>
+  </div>
+</div>
+
+<h2>Refining Background</h2>
+
+<p>
+  Zoom out on the plot by clicking the home button and look at how
+  well the refinement is accounting for the background. It
+  may be helpful to zoom vertically to get a better look. In the
+  data-tree select the <span class="heading">Background</span> dialog. The default is
+  to refine three coefficients, change this to something higher if you
+  feel the background is not fit well. For corundum I chose
+  10. Re-run the refinement, if you're happy with how the background
+  looks, you can move on.
+</p>
+
+<h2>Refining Peak Width and Shape</h2>
+<p>
+  There are two sources of line broadening in diffraction data:
+  instrument effects and sample effects. Instrument effects are not
+  usually of scientific interest and are lumped together and described
+  by parameters in the <span class="heading">Instrument Parameters</span> section. If you
+  used an accurate instrument parameters file, these should not need
+  much adjusting.
+</p>
+
+<p>
+  Of more interest are the sample effects. These can be found in the
+  dialog for each phase, under the <span class="tab">Data</span>
+  tab. They do not have directly refineable parameters, instead you
+  must choose a model to describe the peak shapes and widths. Since we
+  are doing profile fitting, <strong>the parameters in this tab do not
+  reflect their real world analogs</strong>; for that a thorough
+  Rietveld treatment is necessary. Select whichever model you prefer
+  and check the corresponding box. For corundum, I used
+  <span class="heading">size</span>. Sample parameters are usually
+  described well by Lorentzian functions, but the Lorentzian/Gaussian
+  ratio can be refined by the
+  corresponding <span class="heading">LGMix</span> parameter. 1 is
+  entirely Lorentzian.
+</p>
+
+<div class="row">
+  <div class="col-md-4">
+    <img src="/images/posts/peak-final.png" class="img-responsive" />
+    <p class="caption">
+      Fit after multiple refinements.
+  </div>
+  <div class="col-md-8">
+    <p>
+      From here, continue going until you achieve the desired
+      fit. Each time you run the Refine command, GSAS-II performs
+      three refinement cycles. Just because the process ends does not
+      mean that it has found the best fit. You may need to run
+      the <span class="heading">Refine</span> command several times,
+      until the calculated patterns are constant from one refinement
+      to the next. For the corundum example, I ended with a cell
+      parameters of 4.75903Å and 12.99294Å.
+    </p>
+  </div>
+</div>

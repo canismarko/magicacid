@@ -1,0 +1,122 @@
+ext: html
+---
+pub_date: 2015-04-26
+---
+title: Beamtime Galore
+---
+layout: post
+---
+body:
+
+
+<div class="row">
+  <div class="col-md-8 pull-right">
+    <p>
+      My PhD research project involves using X-rays to probe the
+      chemistry of lithium-ion battery electrodes. In order to see
+      something with a high level of detail, you need to look at it in
+      bright light. Analogously, I need access to very high quality
+      X-rays. The last two weekends <b>I traveled to two different
+      synchrotron</b>; particle accelerators whose sole purpose is to
+      generate high intensity X-rays. Each one has 10-30 X-ray beams
+      coming off of it, set up to run a variety of experiments. At
+      Argonne National Lab's <em>Advanced Photon Source</em> (APS),
+      we used diffraction to measure the strain withing a micrometer
+      sized particle. At the <em>Stanford Synchrotron Radiation
+      Lightsource</em> (SSRL) we collected the data to make
+      <strong>three-dimensional reconstructions</strong> of the
+      micro-structure of some samples using <strong>X-ray Transmission
+      Tomography</strong>.
+    </p>
+  </div>
+  <div class="col-md-4">
+    <img src="/images/posts/brian-argonne.jpg"
+	 alt="Brian in the hutch at Argonne" />
+    <p>
+      Fellow grad-student Brian May at beamline 34-ID-E at Argonne
+      National Lab.
+    </p>
+  </div>
+</div>
+
+<!-- more -->
+
+<h2>The Physics</h2>
+
+<div class="row">
+  <div class="col-md-8">
+    <p>
+      Viewed from above, the synchrotron is a big ring. In the case of
+      Argonne, it's 1.1km (3,622ft) around. Stanford's is a little
+      smaller. Electrons travel around the ring at over 99.99% of the
+      speed of light. Anytime a charged particle accelerates, it gives
+      off electromagnetic light waves. [NB: "Light" doesn't
+      necessarily mean visible light, it can also refer to microwaves,
+      UV light, X-rays, etc.] From a physicists perspective, moving in
+      a circle is a form of acceleration, so as these electrons travel
+      around the ring they give off electromagnetic
+      radiation. Because of how fast they're going, the light given
+      off is in the X-ray region of the electromagnetic spectrum. The
+      electrons also go through special magnets, either "undulators"
+      and "wigglers", that give off even better light. These X-rays
+      are very bright, quite straight and highly coherent; perfect for
+      my research.
+    </p>
+  </div>
+  <div class="col-md-4">
+    <img src="http://www.aps.anl.gov/img/aerial_2010.jpg"
+	 alt="Argonne Advanced Photon Source" />
+    <p class="caption">
+      The <em>Advance Photon Source</em> at Argonne National Lab, Chicago IL.
+  </div>
+</div>
+
+<h2>The Chemistry</h2>
+
+<div class="row">
+  <div class="col-md-4">
+    <img class="img-responsive" src="/images/posts/txm-image.png"
+	 alt="X-ray micrograph of secondary particles" />
+    <p class="caption">
+      X-ray micrograph of secondary cathode particles. Each particle
+      is ~2-5µm across.
+    </p>
+  </div>
+  <div class="col-md-8">
+    <p>
+      In my research group, we look at cathode materials for
+      lithium-ion batteries. These materials are usually crystalline,
+      meaning the atoms form a regular, repeating pattern. X-rays are
+      really good at probing crystal structures and so with the right
+      experiment, we can get a lot of information about our
+      sample. The experiment at SSRL made use of an X-ray
+      microscope. The concept is analogous to a conventional
+      microscope except that X-rays have a much smaller wavelength so
+      we can, in theory, resolve much smaller distances. Also,
+      different elements absorb X-rays at different wavelengths, so by
+      tuning the beam we can actually collect images of just certain
+      elements, something conventional microscopy cannot do. We looked
+      at the secondary particles of a battery matherial. Then we
+      rotated the sample and by taking multiple images were able to
+      reconstruct a 3-dimensional model of where specific elements are
+      located.
+    </p>
+  </div>
+</div>
+
+<h2>The Experience</h2>
+
+<p>
+  The first reaction to being at a synchrotron was awe. These machines
+  are enormous and incredibly complex. At first, the equipment can be
+  overwhelming. Fairly quickly, though, I came to realize that each
+  piece is straightforward. I certainly don't claim to understand what
+  all (or even most) of the pieces do, but there's nothing mysterious
+  about their operation. There's also a fair amount of downtime, since
+  it takes time to collect all the data and much of the process is
+  automated. This provides a good opportunity to wander around
+  experiment hall and read the various research posters that the
+  different beamlines have created. Each beamline is set up for a
+  different technique, so seeing what each is capable of was a
+  fascinating tour.
+</p>

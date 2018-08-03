@@ -1,0 +1,152 @@
+ext: md
+---
+pub_date: 2017-03-19
+---
+title: Thoughts About Glass Electrolytes
+---
+category: [Electrochemistry]
+---
+layout: post
+---
+body:
+
+
+In a recent episode of one of my favorite podcasts, the [Skeptic's
+Guide to the
+Universe](http://www.theskepticsguide.org/podcast/sgu/608), they
+discussed [a recent paper](https://dx.doi.org/10.1039/C6EE02888H) from
+the John Goodenough lab. I figured I'd take a look at this paper and
+see what's inside. They propose a type of battery where there's a
+lithium-metal reduction on both sides of the cell. Overall, the
+electrochemical results they show are impressive: very high capacities
+with good cyclability at a decent cell potential (between 2.5 and
+2.7V); though not quite as impressive as the press-release makes them
+sound. However, I'm not clear on how they think this reaction actually
+happens. Many of the clarifying details are missing, which makes it
+hard to properly evaluate. Regardless of the electrochemical
+mechanism, though, if the results can be reproduced reliably, then
+great!
+
+<!-- more -->
+
+There's really two parts to this paper. The first is the use of a
+solid, glassy electrolyte to overcome the limitations of using
+metallic lithium anodes. Dendrite formation is a major problem and, as
+such, modern rechargeable batteries use graphite, resulting in a lower
+energy density and cell potential. Their strategy also avoids the
+flammable, toxic liquid electrolyte, which would be nice. If the
+results are reproducible, this technique could be combined with
+existing cathodes to give a nice increase in energy density. To be
+clear, though, the idea of using
+[solid](https://en.wikipedia.org/wiki/Fast_ion_conductor#beta-Alumina)
+or [polymer](https://en.wikipedia.org/wiki/Lithium_polymer_battery)
+electrolytes in not new.
+
+The second part seems to be a fundamentally new mechanism for
+constructing batteries. Based on the schematic they've drawn in figure
+4, it looks like they're oxidizing lithium metal at the anode, and
+then reducing lithium metal at the cathode. The anode part is fine;
+that's the standard discharge reaction for lithium-metal
+batteries. However, having the same reduction/oxidation ("redox")
+half-reaction taking place at both the cathode and the anode would
+give a cell potential of 0V; that is, the battery wouldn't be able to
+store any energy. They claim that:
+
+> The Fermi level of the lithium plated on the carbon–copper composite
+> cathode current collector is determined by the Fermi level of the
+> cathode current collector, whereas the Fermi level of the lithium
+> anode remains that of metallic lithium, but the cell voltage is
+> determined by the energy of the redox couple of the unreduced redox
+> center.
+
+The implication here is that the potential of the cathode redox couple
+is raised by the presence of copper. It's not clear to me why the
+Fermi level¹ of plated lithium would be the level of the current
+collector. It is true that the chemical potential of metallic lithium
+would be higher than that of metallic copper, and if they were
+proposing an alloying mechanism, then the Fermi level would be
+influenced by the copper. However, they're claiming that the lithium
+plates on to the copper. Presumably, anything beyond the first several
+atomic layers of lithium wouldn't really be influenced by the presence
+of copper underneath. A simple test would have been to replace the
+copper with aluminum and see what affect this has on the potential,
+but they didn't perform this experiment.
+
+**It's also not clear to me what the role of the sulfur, ferrocene or
+manganese-oxide redox center is**. The idea that these redox centers
+are not reduced during the reaction suggests that they serve a
+catalytic role, which the authors confirm in the introduction. These
+redox centers therefore **can't influence the thermodynamic potential
+of the cell**, only the kinetic barriers that must be overcome to
+initiate redox². This would effectively raise the potential needed to
+charge the cell, but lower the potential achieved on discharge, and so
+doesn't explain the asymmetry between the cathode and anode
+potentials.
+
+Having said all that, **the images they show** combined with the
+extremely high full-discharge capacities do **seem to confirm that
+they have moved all the lithium through the glass** from one electrode
+to the other. If this can be reproduced, then I have an opportunity to
+improve my understanding of some of these foundational electrochemical
+principles.
+
+There are a few other things I think are missing from the
+paper. First, it's unusual that no cyclic-voltammetry (CV) was
+done. CV is an electrochemical technique that sweeps across a range of
+potentials, and the current response at each point gives information
+about which redox processes are occurring as well as the inherent
+kinetic barriers in the system. It's a standard technique for
+characterizing new materials that operate by known mechanisms, let
+alone an entirely new mechanism such as this one.
+
+The press release claims
+
+> high volumetric energy density and fast rates of charge and discharge
+
+neither of which are reported in the paper. The paper does claim "high
+volumetric energy density" (Joules per mL) in describing previous work
+on sodium anodes, but never actual reports the values they achieved,
+instead opting for gravimetric energy density (Joules per gram). To be
+fair, volumetric energy density is hard to calculate for a system like
+this, and gravimetric values are far more common. Regarding their rate
+capability, they show reversible electrochemistry data at 0.25C and
+0.1C rates, which would corresponding to charging your car in 4 and 10
+hours respectively³. Not bad by any means, but I would characterize
+this as "moderate". The authors even describe this towards the end as
+"The cell voltages and rates are acceptable.", which I agree
+with.
+
+In summary, the results look promising but I await replication and
+better description of what's actually happening. For a paper that
+sounds as revolutionary as this one does, it's noteworthy that it's
+only 6 pages and has only 5 references, 3 of which are from the
+authors' own research group. This is not the first paper to report "a
+safe, low-cost, lithium or sodium rechargeable battery of high energy
+density and long cycle life." but somehow those claims never seem to
+be as transformative as promised. From the paper:
+
+> All that remains to be optimized is the thickness of the solid glass
+> electrolyte, the loading and choice of the redox center in the
+> composite cathode to provide a required voltage, and optimization of
+> the rate of ion transfer across the cathode/electrolyte interface to
+> obtain a desired rate performance of the stored electric power.
+
+So what, about 5-10 years maybe...?
+
+#### Footnotes
+
+1) The *Fermi Level* for a species can be (non-rigorously)
+described as the work needed to add an electron to a material. Since
+battery chemistry is all about moving electrons around, Fermi levels
+are a key concept for understanding the underlying thermodynamics.
+
+2) This is similar to how enzymes can only influence the rate of a
+bio-chemical reaction, not the underlying thermodynamic states; a
+second, higher-energy, reaction (eg ATP --> ADP) must be coupled to
+the reaction of interest in order to reverse the reaction arrow.
+
+3) This description needs a large asterisk next to it. The authors
+only charged the cell partially in 10 hours but also have a
+significantly larger capacity than conventional materials, so it's
+difficult to compare this in a "your car charges in 4 hours" kind of
+way.

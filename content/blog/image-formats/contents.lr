@@ -1,0 +1,151 @@
+ext: html
+---
+pub_date: 2015-01-24
+---
+title: Image Formats
+---
+layout: post
+---
+body:
+
+
+<p>
+  This post is meant as a resource for helping to decide how best to
+  send images for posting on websites. There are usually three
+  possible options: <strong>lossly bitmaps</strong>, <strong>lossless
+  bitmaps</strong> and <strong>vector graphics</strong>. The right
+  decision is usually a compromise between a high-quality image that
+  gives a clean, sharp presentation to the user, and a small file-size
+  so a user doesn't get bored while waiting for your website to load
+  all of the 2MB images. Using the right image formats will result in
+  a website that loads quickly and has a consistent, sharp layout.
+</p>
+
+<table class="table">
+  <tr>
+    <th>Image type</th>
+    <th>Format</th>
+    <th>Example Extension</th>
+    <th>Min Resolution (pixels)</th>
+  </tr>
+  <tr>
+    <td>Photograph</td>
+    <td><a href="{{ page.url }}#lossless">Lossy bitmap</a></td>
+    <td>.jpg .jpeg</td>
+    <td>Landscape: 750&times;464 <br />
+      Portrait: 350&times;475</td>
+  </tr>
+  <tr>
+    <td>Logos and other flat graphics</td>
+    <td><a href="{{ page.url }}#vector">Vector graphics</a> (preferred)</td>
+    <td>.svg .ai .eps</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><a href="{{ post.url }}#lossless">Lossless bitmap</a></td>
+    <td>.png .tiff .gif .bmp</td>
+    <td>Context dependent</td>
+  </tr>
+</table>
+
+<!-- more -->
+
+<p>
+  I design a few websites in my spare time, namely
+  the <a href="http://kalamazooacs.org" title="KACS homepage">Kalamazoo
+  ACS local section</a> and an
+  <a href="jglcrm2015.com" title="joint regional meeting homepage">
+    ACS regional meeting</a>. This post is aimed at contributors for
+    these organizations.
+</p>
+
+<h2 id="vector">Raster vs Vector Graphics</h2>
+
+<div class="row">
+  <div class="col-md-8">
+    <p>
+      Image formats basically store information as a series of 1's and
+      0's on a computer's hard-drive. Two mains schemes are
+      available. <em>Raster graphics</em>, also known
+      as <em>bitmaps</em>, divide the image into a series of discrete
+      picture elements, or &ldquo;pixels&rdquo;, and assign each one a
+      number that represents its color. Deciding how many pixels to
+      use (&ldquo;resolution&rdquo;) determines how small each pixel
+      is. Any details that are smaller than the size of one individual
+      pixel are lost. A higher resolution saves more detail but
+      results in larger file-sizes and thus slower page loading
+      times. <strong>When submitting images for publication, higher
+      resolutions are generally better</strong>; I can always remove detail but
+      I can't add it back in once it's gone.
+    </p>
+    <p>
+      <em>Vector graphics</em>, on the other hand, describe the image
+      as being made up of various shapes, or &ldquo;vectors&rdquo;. A
+      clock-face might be described as a black circle with a specific
+      thickness; another slightly smaller circle filled with white;
+      and various straight black lines of different lengths. The
+      advantage here is that all the details of the image are captured
+      perfectly. As a result, the image can be scaled to any size with
+      no loss of quality. The catch is that the image has to be
+      designed and saved as a vector graphic using something
+      like <a href="https://www.inkscape.org/" title="Inkscape
+      homepage">Inkscape</a> or Adobe Illustrator. A vector graphic
+      can be converted into a raster graphic but a raster graphic
+      cannot be converted back into a vector graphic. For this
+      reason, <strong>please send me vector graphics if
+      possible.</strong>
+    </p>
+  </div>
+  <div class="col-md-4">
+    <a href="http://en.wikipedia.org/wiki/File:VectorBitmapExample.svg" alt="Image on wikipedia">
+      <img src="/images/posts/vector-graphics-bottle.png" />
+    </a>
+    <p class="caption">
+      Example image showing the difference between vector graphics and
+      raster (bitmap) graphics.
+    </p>
+  </div>
+</div>
+
+<h2 id="lossless">Photographs vs. Graphics (Lossy vs Lossless)</h2>
+<div class="row">
+  <div class="col-md-8">
+    <p>Not all raster graphics are created equal. As discussed earlier,
+      storing a higher level of detail requires higher resolutions and so
+      results in larger file-sizes. Techniques have been developed that
+      compress the image into a smaller file-size; these are known
+      as <em>compression algorithms</em>. They can be devided into two
+      categories; <em>lossy compression</em> makes permanent changes to the
+      image, while <em>lossless</em> algorithms do
+      not. The trade-off is that lossy compression can achieve smaller
+      file-sizes.
+    </p>
+    <p id="lossy">
+      The JPEG standard divides the image into 8 pixel square sections
+      and converts each section to a series of frequency components. A
+      full explanation can be found
+      on <a href="http://en.wikipedia.org/wiki/JPEG">wikipedia</a>. This
+      process introduces some artifacts into the image and so it is an
+      example of <em>lossy compression</em>. In photographs, these
+      artifacts are generally not noticeable and the benefits in
+      file-size reduction are significant. In flat graphics (logos,
+      etc.), these artifacts become noticeable and file-sizes are
+      usually not much better than lossless alogirithms, like PNG. A
+      lossless image can be converted to JPEG but I cannot go the
+      otherway around without a considerable amount of
+      work. <strong>Please submit logos and similar graphics using PNG
+      or another lossless format</strong>; photographs can be sent as
+      JPEG files.
+    </p>
+  </div>
+
+  <div class="col-md-4">
+    <img src="/images/posts/jglcrm-compression-test.png" />
+    <p class="caption">
+      JGLCRM logo using lossless compression (top) and lossy JPEG
+      compression (bottom) using a quality factor of 5 for
+      emphasis. Notice the artifacts along the color edges.
+    </p>
+  </div>
+</div>
