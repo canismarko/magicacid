@@ -7,6 +7,8 @@
 @import "node_modules/bootstrap/scss/badge";
 @import "node_modules/bootstrap/scss/nav";
 @import "node_modules/bootstrap/scss/navbar";
+@import "node_modules/bootstrap/scss/tables";
+@import "node_modules/bootstrap/scss/utilities/text";
 
 $card-margin: 15px;
 
@@ -16,6 +18,19 @@ body {
     background-repeat: no-repeat;
     background-position: right top;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.footer {
+    margin-top: $card-margin;
+    margin-bottom: $card-margin;
+    @extend .card;
+    .lektor {
+	margin-top: 16px;
+	@extend .text-center;
+    }
+    .copyright {
+	@extend .text-center;
+    }
 }
 
 // #home {
@@ -32,6 +47,11 @@ body {
 // 	}
 //     }
 // }
+
+.publication-list,.recent-posts {
+    padding-left: 15px;
+    list-style-position: outside;
+}
 
 .header {
     margin: 10px 0px;
@@ -108,6 +128,10 @@ body {
     @extend .card;
 }
 
+.pagination {
+    margin-top: $card-margin;
+}
+
 .blog-post {
     @extend .card;
     margin-top: 15px;
@@ -118,10 +142,14 @@ body {
 	}
     }
     .post-body {
+	@extend .card-body;
 	p {text-align: justify;}
 	img {
 	    @extend .img-fluid;
 	}
+    }
+    table {
+	@extend .table;
     }
 }
 
@@ -153,7 +181,8 @@ ol.footnotes {
 }
 
 .page-content {
-    background-color: white;
+    @extend .card;
+    // background-color: white;
     margin-top: $card-margin;
     padding: $card-margin;
 }

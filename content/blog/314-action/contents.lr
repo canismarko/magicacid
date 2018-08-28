@@ -10,9 +10,8 @@ layout: post
 ---
 body:
 
-
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-lg-6">
     <p>
       One thing has become clear to me over the past year: <strong>our
 	political system in the US needs more scientifically literate
@@ -35,8 +34,10 @@ body:
       but after grad-school...who knows!
     </p>
   </div>
-  <div class="col-md-6">
-    <img src="/images/posts/314-training.jpg" alt="Group shot at the 314 action training" />
+  <div class="col-lg-6">
+
+    <img src="/blog/314-action/314-training.jpg"
+    	 alt="Group shot at the 314 action training" />
   </div>
 </div>
 

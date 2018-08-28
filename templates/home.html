@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+
+<div class="page-content">
+  <!-- content -->
+  <h2>{{ this.title }}</h2>
+
+  <div class="row">
+    <div class="col-md-8">
+      {{ this.body }}
+    </div>
+    <div class="col-md-4">
+      <img src="/static/headshot.jpg"
+	   alt="Mark headshot"
+	   class="img-fluid" />
+    </div>
+  </div>
+
+  <br />
+
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Recent Posts</h2>
+      <ul class="recent-posts">
+	{% for post in site.query('/blog').order_by('-pub_date').limit(3) %}
+	<li>
+	  <a href="{{ post|url }}">{{ post.title }}</a>
+	</li>
+	{% endfor %}
+	<li>
+	  <a href="/blog/" title="See all blog posts">more&hellip;</a>
+	</li>
+      </ul>
+
+    </div>
+    <div class="col-md-6">
+      <h2>Publications</h2>
+      <ul class="publication-list">
+	<li>
+	  <a href="http://dx.doi.org/10.1039/C8EE00001H">
+	    Single-Particle Measurements of Electrochemical Kinetics
+	    in NMC and NCA Cathodes for Li-Ion Batteries
+	  </a>
+	</li>
+	<li>
+	  <a href="http://dx.doi.org/10.1021/acs.nanolett.7b00379">
+	    Intergranular Cracking as a Major Cause of Long-Term
+	    Capacity Fading of Layered Cathodes
+	  </a>
+	</li>
+	<li>
+	  <a href="http://dx.doi.org/10.1021/acs.chemmater.6b05114">Visualization
+	    of Electrochemical Reactions in Battery Materials with X-ray
+	    Microscopy and Mapping</a>
+	</li>
+	<li>
+	  <a href="/resume/" title="See full publication list">more&hellip;</a>
+	</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+  {% endblock %}

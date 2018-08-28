@@ -25,20 +25,21 @@ body:
   decomposition of a single phase using the Pawley method. This method
   is simpler than the Rietveld method and will provide a closer fit,
   however the the refined parameters are not physically meaningful so
-  the amount of information obtained is limited.
-</p>
-
-<p>
-  In this tutorial, I will refine a corundum scan taken on our Bruker
-  D8 Discover ("Alice"). The diffractogram can be downloaded
-  in
-  <a href="/supporting-files/corundum.xye" title="Download corundum xye file">
-    .xye format</a>. You may also want to look at
-    the <a href="/supporting-files/basic-refinement.gpx">finished
-    GSAS-II project</a>.
+  the amount of information obtained is limited. In this tutorial, I
+  will refine a corundum scan taken on our Bruker D8 Discover
+  ("Alice").
 </p>
 
 <!-- more -->
+
+<p>
+ The diffractogram can be downloaded
+  in
+  <a href="corundum.xye" title="Download corundum xye file">
+    .xye format</a>. You may also want to look at
+    the <a href="basic-refinement.gpx">finished
+    GSAS-II project</a>.
+</p>
 
 <h2>Installation</h2>
 
@@ -54,7 +55,7 @@ body:
   the screen shot below.
 </p>
 
-<img src="/images/posts/blank-refinement.png" class="img-responsive"
+<img src="blank-refinement.png"
      alt="Screenshot of new refinement project" />
 
 <p>
@@ -206,7 +207,7 @@ body:
     </p>
   </div>
   <div class="col-md-5">
-    <img src="/images/posts/peak-good-enough.png" class="img-responsive" />
+    <img src="peak-good-enough.png" class="img-responsive" />
     <p class="caption">
       Refinement after first pass. Shown are observed (blue),
       calculated (green), background (red) and difference (teal).
@@ -255,7 +256,7 @@ body:
 
 <div class="row">
   <div class="col-md-4">
-    <img src="/images/posts/peak-final.png" class="img-responsive" />
+    <img src="peak-final.png" class="img-responsive" />
     <p class="caption">
       Fit after multiple refinements.
   </div>

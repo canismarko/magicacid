@@ -13,14 +13,13 @@ body:
 
 <div class="row">
   <div class="col-sm-2">
-    <img src="/images/posts/carbon-monoxide-detector.jpg" />
+    <img src="/blog/co-detector-2/carbon-monoxide-detector.jpg" />
   </div>
   <div class="col-sm-10">
     <p>
       This is a follow-up post to
-      <a href="{% post_url 2014-05-25-CO-detector %}"
-	 title="Read original carbon monoxide article">&ldquo;Why Do I Need a Carbon
-	Monoxide Detector?&rdquo;</a>, which talks about the chemistry of
+      &ldquo;Why Do I Need a Carbon
+	Monoxide Detector?&rdquo;, which talks about the chemistry of
       carbon monoxide with oxygen-transporting proteins in your
       blood. I received a few questions about <strong>the relationship
 	between carbon monoxide levels in the air and the levels in your
@@ -30,6 +29,8 @@ body:
     </p>
   </div>
 </div>
+
+<!-- more -->
 
 <h2>CO Levels in Air and Blood</h2>
 <p>
@@ -99,7 +100,7 @@ body:
     <p>
   </div>
   <div class="col-md-6">
-    <img src="/images/posts/carboxyhemoglobin-graph.png"
+    <img src="carboxyhemoglobin-graph.png"
 	 title="Graph of COHb levels versus exposure time" />
     <p class="caption">
       Solutions to the Coburn-Forster-Kane equation for various air

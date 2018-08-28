@@ -37,7 +37,7 @@ body:
     </p>
   </div>
   <div class="col-md-4">
-    <img src="/images/posts/sun-xray.jpg"
+    <img src="/blog/vitamin-d/sun-xray.jpg"
 	 alt="Image of the sun taken at x-ray wavelengths" />
     <p class="caption">
       The sun at 17.1 nm light. Courtesy of SOHO/EIT consortium. SOHO
@@ -87,7 +87,7 @@ body:
     </p>
   </div>
   <div class="col-md-6">
-    <img src="/images/posts/vitamin-d-receptor.png"
+    <img src="vitamin-d-receptor.png"
 	 alt="3D structure of dihydroxy vitamin D inside the vitamin D receptor protein"
 	 />
     <p class="caption">
@@ -120,7 +120,7 @@ body:
 
 <div class="row">
   <div class="col-md-6">
-    <img src="/images/posts/vitamin-D-synthesis.png" />
+    <img src="vitamin-D-synthesis.png" />
     <p class="caption">
       The reaction mechanism for making <em>vitamin D<sub>3</sub></em>
       (right) from <em>7-dehydrocholesterol</em> (left). Ultraviolet

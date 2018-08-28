@@ -1,15 +1,40 @@
 {% macro render_pagination(pagination) %}
-  <div class="pagination">
-    {% if pagination.has_prev %}
-      <a href="{{ pagination.prev|url }}">&laquo; Previous</a>
+<ul class="pagination">
+  <!-- "Previous" arrow for going backwards -->
+  {% if pagination.has_prev %}
+  <li class="page-item">
+    <a class="page-link" href="{{ pagination.prev|url }}">
+      <i class="fas fa-arrow-left"></i></a>
     {% else %}
-      <span class="disabled">&laquo; Previous</span>
+  <li class="page-item disabled">
+    <span class="page-link" href="#">
+      <i class="fas fa-arrow-left"></i>
+    </span>
     {% endif %}
-    | {{ pagination.page }} |
-    {% if pagination.has_next %}
-      <a href="{{ pagination.next|url }}">Next &raquo;</a>
+  </li>
+
+  {# List all the pages #}
+  {% for page in range(1, pagination.pages + 1) %}
+  <!-- Button for going to page {{ page }} -->
+  {% if page == pagination.page %}
+  <li class="page-item active">
     {% else %}
-      <span class="disabled">Next &raquo;</span>
+  <li class="page-item">
     {% endif %}
-  </div>
+    <a class="page-link" href="{{ pagination.for_page(page)|url }}">{{ page }}</a>
+    </li>
+  {% endfor %}
+
+  <!-- "Next" arrow for going forwards -->
+  {% if pagination.has_next %}
+  <li class="page-item">
+    <a class="page-link" href="{{ pagination.next|url }}">
+      <i class="fas fa-arrow-right"></i>
+    </a>
+    {% else %}
+  <li class="page-item disabled">
+    <span class="page-link" href="#">
+      <i class="fas fa-arrow-right"></i></span>
+  {% endif %}
+</ul>
 {% endmacro %}

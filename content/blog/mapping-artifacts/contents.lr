@@ -27,7 +27,7 @@ body:
     </p>
   </div>
   <div class="col-md-4">
-    <img src="/images/posts/map180.svg" class="img-responsive" alt="MgMn2O4 map" />
+    <img src="/blog/mapping-artifacts/map180.svg" alt="MgMn2O4 map" />
     <p class="caption">Map of discharged \(MgMn_2O_4\) battery cathode based on area of 18° peak.</p>
   </div>
 </div>
@@ -56,7 +56,7 @@ body:
   fitting in some pixels.
 </p>
 
-<img src="/images/posts/mmo-bulk-diffractogram.svg" class="img-responsive" alt="MgMn2O4 bulk diffractogram" />
+<img src="mmo-bulk-diffractogram.svg" alt="MgMn2O4 bulk diffractogram" />
 <p class="caption">
   Average of diffractograms from each scan in original map (blue) and
   map after 180° rotation of sample (green).
@@ -76,10 +76,10 @@ body:
 
 <div class="row">
   <div class="col-md-6">
-    <img src="/images/posts/mmo-map.svg" class="img-responsive" alt="MgMn2O4 map" />
+    <img src="mmo-map.svg" alt="MgMn2O4 map" />
   </div>
   <div class="col-md-6">
-    <img src="/images/posts/mmo-map-180.svg" class="img-responsive" alt="MgMn2O4 map rotated 180°" />
+    <img src="mmo-map-180.svg" alt="MgMn2O4 map rotated 180°" />
   </div>
 </div>
 <p class="caption">
@@ -109,10 +109,10 @@ body:
 
 <div class="row">
   <div class="col-md-6">
-    <img src="/images/posts/xrd-mounting-1.jpg" class="img-responsive" alt="Mounting of sample on XRD stage" />
+    <img src="xrd-mounting-1.jpg" alt="Mounting of sample on XRD stage" />
   </div>
   <div class="col-md-6">
-    <img src="/images/posts/xrd-mounting-2.jpg" class="img-responsive" alt="Mounting of sample on XRD stage" />
+    <img src="xrd-mounting-2.jpg" alt="Mounting of sample on XRD stage" />
   </div>
 </div>
 

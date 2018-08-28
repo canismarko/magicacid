@@ -13,7 +13,7 @@ body:
 
 <div class="row">
   <div class="col-sm-4">
-    <img src="/images/posts/carbon-monoxide-toxic.png" />
+    <img src="/blog/CO-detector/carbon-monoxide-toxic.png" />
   </div>
   <div class="col-sm-8">
     <p>
@@ -51,7 +51,7 @@ body:
     </p>
   </div>
   <div class="col-sm-6">
-    <img src="/images/posts/deoxyhemoglobin-popout.png" />
+    <img src="/blog/CO-detector/deoxyhemoglobin-popout.png" />
     <p class="caption">
       An iron atom can bind an oxygen molecule while the rest of the
       protein makes a nice pocket that keeps other things out of the
@@ -59,6 +59,8 @@ body:
     </p>
   </div>
 </div>
+
+<!-- more -->
 
 <p>
   So what about carbon monoxide? Well it's a similar shape and size to
@@ -91,7 +93,7 @@ body:
     </p>
   </div>
   <div class="col-md-6">
-    <img src="/images/posts/oxy-carboxy-hemoglobin.png" />
+    <img src="oxy-carboxy-hemoglobin.png" />
     <p class="caption">
       Oxygen (left image, light-red) binds in a slightly bent
       configuration which doesn't get in the way of the distal
@@ -118,8 +120,6 @@ body:
 </p>
 
 <p>
-  This article prompted me to write a <strong>follow-up
-  piece: <a href="{% post_url 2014-06-01-co-detector-2 %}"
-	    title="Read the follow-up post">
-      I Have a Carbon Monoxide Detector. Now What?</a></strong>.
+  This article prompted me to write a <strong>follow-up piece:
+  <strong>"I Have a Carbon Monoxide Detector. Now What?"</strong>.
 </p>

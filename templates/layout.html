@@ -60,16 +60,21 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navbarNav">
 	  <ul class="navbar-nav mr-auto">
-	    <li class="nav-item active">
+	    <li class="nav-item{% if '/blog/' in (this|url) %} active{% endif %}">
 	      <a class="nav-link" href="/blog/"><i class="fas fa-paragraph"></i> Blog<span class="sr-only">(current)</span></a>
 	    </li>
 	    <li class="nav-item">
-	      <a href="/categories.html" class="nav-link"
-		 title="Navigate to list of categories"><i class="fas fa-list-ul"></i> Categories</a>
+	      <a href="/resume/" class="nav-link"
+		 title="View my resume and curriculum vitae">
+		<i class="fas fa-file"></i> Resume/CV</a>
 	    </li>
-	    <li class="nav-item">
-	      <a href="/about.html" class="nav-link" title="Learn more about this blog">
-		  About</a></li>
+	    <!-- <li class="nav-item"> -->
+	    <!--   <a href="/categories.html" class="nav-link" -->
+	    <!-- 	 title="Navigate to list of categories"><i class="fas fa-list-ul"></i> Categories</a> -->
+	    <!-- </li> -->
+	    <!-- <li class="nav-item"> -->
+	    <!--   <a href="/about.html" class="nav-link" title="Learn more about this blog"> -->
+	    <!-- 	  About</a></li> -->
 	  </ul>
 	  <ul class="navbar-nav social-icons">
 	    <!-- RSS Icon -->
@@ -114,14 +119,22 @@
       {% block body %}{% endblock %}
 
       <div class="footer">
+	<p class="lektor">
+	  Built with <a href="https://www.getlektor.com/" title="Lektor home page">
+	    Lektor</a>.
+	</p>
+	<p class="copyright">
+	  Copyright &copy; 2018 Mark Wolfman. All rights
+	  reserved.
+	</p>
       </div><!-- /.footer -->
     </div><!-- /.container -->
 
     <!-- Javascript -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
 	    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.3.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" -->
-    <!-- 	    crossorigin="anonymous"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    	    crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha256-98vAGjEDGN79TjHkYWVD4s87rvWkdWLHPs5MC3FvFX4=" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"

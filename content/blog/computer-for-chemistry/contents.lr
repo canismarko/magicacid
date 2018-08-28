@@ -17,7 +17,7 @@ body:
       frames</strong> and then <strong>processing and combining
       them</strong> into one image; I think it's worth the time to get
       this right. If you have anything to share on the issue, feel
-      free to <a href="{{ page.url }}#comments" title="jump down to comments
+      free to <a href="#comments" title="jump down to comments
       section">leave a comment</a>. I wasn't given many restrictions
       other than that it must have a monitor, keyboard and mouse (for
       ergonomic reasons) and that &ldquo;$1000 is on the high end but
@@ -26,14 +26,14 @@ body:
       of the products listed will probably by obsolete by the time I'm
       done writing this, but hopefully the background will still be
       valid for a while. If you want to see specifically which parts
-      I'm considering, <a href="{{ page.url }}#parts-list">jump straight
+      I'm considering, <a href="{{ this.url }}#parts-list">jump straight
       to the parts list</a>.
     </p>
   </div>
   <div class="col-md-4">
     <a href="https://en.wikipedia.org/wiki/Amiga#mediaviewer/File:Amiga500_system.jpg"
        title="&copy; 2006 Bill Bertram">
-      <img src="/images/posts/amiga.jpg" class="img-responsive" alt="Amiga 500" />
+      <img src="/blog/computer-for-chemistry/amiga.jpg" class="img-responsive" alt="Amiga 500" />
     </a>
   </div>
 </div>

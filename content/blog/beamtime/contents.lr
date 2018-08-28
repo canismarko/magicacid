@@ -30,7 +30,7 @@ body:
     </p>
   </div>
   <div class="col-md-4">
-    <img src="/images/posts/brian-argonne.jpg"
+    <img src="/blog/beamtime/brian-argonne.jpg"
 	 alt="Brian in the hutch at Argonne" />
     <p>
       Fellow grad-student Brian May at beamline 34-ID-E at Argonne
@@ -64,7 +64,7 @@ body:
     </p>
   </div>
   <div class="col-md-4">
-    <img src="http://www.aps.anl.gov/img/aerial_2010.jpg"
+    <img src="aps_ariel.jpg"
 	 alt="Argonne Advanced Photon Source" />
     <p class="caption">
       The <em>Advance Photon Source</em> at Argonne National Lab, Chicago IL.
@@ -75,7 +75,7 @@ body:
 
 <div class="row">
   <div class="col-md-4">
-    <img class="img-responsive" src="/images/posts/txm-image.png"
+    <img src="txm-image.png"
 	 alt="X-ray micrograph of secondary particles" />
     <p class="caption">
       X-ray micrograph of secondary cathode particles. Each particle

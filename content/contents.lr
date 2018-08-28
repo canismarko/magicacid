@@ -1,4 +1,4 @@
-_model: page
+_model: home
 ---
 title: Welcome to MagicAcid!
 ---
@@ -6,12 +6,20 @@ comments: no
 ---
 body:
 
-<div class="row">
-  <div class="col-md-8">
-  </div>
-  <div class="col-md-4">
-    <img src="/static/headshot.jpg"
-	 alt="Mark headshot"
-	 class="img-fluid" />
-  </div>
+This is my personal web-page. It's my opportunity to share topics that
+interest me. I'm a **chemistry PhD student** working on Li-ion battery
+research. Please **check out the [blog section](/blog/)** for some of
+my latest info.
+
+<div class="alert alert-info">
+  <p>
+    I'm finishing my PhD soon and looking for <strong>post-doctoral
+      research positions</strong>. If you're interested in hiring a
+      post-doc for energy research,
+      please <a href="mailto:canismarko@gmail.com"><strong>get in
+      touch</strong></a>.
+  </p>
+</div>
+
+
 ---

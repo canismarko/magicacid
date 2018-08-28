@@ -21,33 +21,14 @@ body:
   a website that loads quickly and has a consistent, sharp layout.
 </p>
 
-<table class="table">
-  <tr>
-    <th>Image type</th>
-    <th>Format</th>
-    <th>Example Extension</th>
-    <th>Min Resolution (pixels)</th>
-  </tr>
-  <tr>
-    <td>Photograph</td>
-    <td><a href="{{ page.url }}#lossless">Lossy bitmap</a></td>
-    <td>.jpg .jpeg</td>
-    <td>Landscape: 750&times;464 <br />
-      Portrait: 350&times;475</td>
-  </tr>
-  <tr>
-    <td>Logos and other flat graphics</td>
-    <td><a href="{{ page.url }}#vector">Vector graphics</a> (preferred)</td>
-    <td>.svg .ai .eps</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><a href="{{ post.url }}#lossless">Lossless bitmap</a></td>
-    <td>.png .tiff .gif .bmp</td>
-    <td>Context dependent</td>
-  </tr>
-</table>
+
+| Image Type                    | Format                                  | Example Extension   | Min Resolution (pixels)  |
+|-------------------------------|-----------------------------------------|---------------------|--------------------------|
+| Photograph                    | [Lossy bitmap](#lossless)               | .jpg .jpeg          | Landscape: 750&times;464 |
+|                               |                                         |                     | Portrait: 350&times;475  |
+| Logos and other flat graphics | [Vector graphics (preferred)](#vector)  | .svg .ai .eps       | N/A	   		   |
+|                               |                                         | .png .tif .gif .bmp | Context dependent        |
+
 
 <!-- more -->
 
@@ -99,7 +80,7 @@ body:
   </div>
   <div class="col-md-4">
     <a href="http://en.wikipedia.org/wiki/File:VectorBitmapExample.svg" alt="Image on wikipedia">
-      <img src="/images/posts/vector-graphics-bottle.png" />
+      <img src="vector-graphics-bottle.png" />
     </a>
     <p class="caption">
       Example image showing the difference between vector graphics and
@@ -141,7 +122,7 @@ body:
   </div>
 
   <div class="col-md-4">
-    <img src="/images/posts/jglcrm-compression-test.png" />
+    <img src="jglcrm-compression-test.png" />
     <p class="caption">
       JGLCRM logo using lossless compression (top) and lossy JPEG
       compression (bottom) using a quality factor of 5 for
