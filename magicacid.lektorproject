@@ -7,9 +7,15 @@ lektor-webpack-support = 0.5
 lektor-markdown-excerpt = 0.1
 lektor-jinja-content = 0.3
 lektor-atom = 0.3
+lektor-s3 = 0.5.1
 
 [servers.simon]
 name = Simon
 enabled = yes
 default = yes
 target = rsync://simon.artiosonline.com/srv/magicacid/
+
+[servers.s3]
+name = S3
+enabled = yes
+target = s3://magicacid.com
